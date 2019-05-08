@@ -1,0 +1,89 @@
+\chapter{Fundamentação Teórica}
+
+O processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-procesamento, extração de padrões, pós processamento e utilização do conhecimento \cite{rezende2011uso}.
+
+\subsection{Identificação do Problema}
+
+A primeira etapa é definir quais textos serão submetidos à Mineração, bem como os locais nos quais eles são armazenados.
+
+\subsection{Pré-Processamento}
+
+Essa etapa possui uma relevância fundamental no processo de descoberta de conhecimento. As atividades de obtenção e limpeza dos dados normalmente
+consomem mais da metade do tempo dedicado ao processo como um todo. Porém, o tratamento inicial dos dados confere maior consistência a eles e pode evitar a obtenção de resultados distorcidos \cite{maria2012}.
+
+Para a obtenção dos conceitos faz-se necessário a aplicação de uma série de técnicas que permitam eliminar dentro de cada texto as redundâncias e/ou variações morfológicas. O objetivo dessa etapa consiste em transformar o conjunto de documentos em uma base mais limpa, onde o trabalho de representação de documentos, o respectivo processamento dos dados e a consequente interpretação destes, possam ser feitas de maneira mais rápida e eficiente \cite{maria2012}.
+
+Seguem a descrição de algumas das técnicas usualmente utilizadas na preparação dos dados:
+
+\subsubsection{Stopwords}
+
+No processo de análise dos dados identificam-se palavras com baixa frequência, que podem ser removidas, pois nada acrescentam à representatividade da coleção ou, que sozinhas nada significam, tais como preposições, pronomes, artigos e advérbios
+
+\subsubsection{Keywords}
+
+São determinadas as principais palavras no texto, baseadas na frequência com que elas aparecem no mesmo. Segundo Santos \cite{wives1999estudo} a técnica mais comum de identificação de  atributos (palavras) marcantes é a frequência relativa, que indica o quanto uma determinada palavra é importante para um documento, de acordo com o número de ocorrências desta palavra no documento. Segue a fórmula da freqüência relativa:
+
+\begin{equation}
+	F_{relX} = \frac{F_{absX}}{N}
+\end{equation}
+
+Onde:
+
+$F_{rel}$ frequência relativa de uma palavra x em um documento; 
+
+$F_{abs}$ número de vezes que a palavra aparece no documento; 
+
+N número total de palavras no texto;\
+
+\subsubsection{Stemming}
+
+Stemming é uma técnica de redução de termos a um radical comum, a partir da análise das características gramaticais dos elementos, como grau, número, gênero e desinência. Tem o objetivo de retirar os sufixos e prefixos das palavras, e encontrar a sua forma primitiva. Assim, as palavras no plural ou derivadas são reduzidas a um radical único, à sua raiz, simplificando a representação dos termos envolvidos no documento. Isso implica numa única entrada nos índices, aumentando o desempenho do processo.\cite{maria2012}.
+
+Dois erros típicos que costumam ocorrer durante o processo de stemming são \textit{overstemming} e \textit{understemming}. \textit{Overstemming} se dá quando a cadeia de caracteres removida não é um sufixo, mas parte do \textit{stem}. Por exemplo, a palavra gramática, após ser processada por um stemmer, é transformada no \textit{stem} grama. Neste caso, a cadeia de caracteres removida eliminou parte do stem correto, a saber "gramát". Já \textit{understemming} ocorre quando um sufixo não é removido completamente. Por exemplo, quando a palavra "referência" é transformada no \textit{stem}  "referênc", ao invés do stem considerado correto  "refer" \cite{uber2004}.  
+
+
+\subsection{Extração de Padrões}
+
+Essa é a principal etapa do processo de mineração de textos, nela ocorre a busca efetiva por conhecimentos inovadores e úteis a partir dos dados textuais. A aplicação dos algoritmos, fundamentados em técnicas que procuram, segundo determinados paradigmas, visa explorar os dados de forma a produzir modelos de conhecimento. 
+
+\subsection{Pós Processamento}
+
+Aqui são realizados a análise e interpretação dos dados, através de ferramentas como gráficos, tabelas. Possibilitando traçar novas estratégias para a investigação dos dados, ou até mesmo consolidar os resultados.
+
+\subsection{Utilização do Conhecimento}
+
+Etapa na qual as informações já foram retiradas do texto, e está pronta para ser utilziada.
+
+
+\section{Cronograma}
+
+\begin{table}[h]
+\centering
+ \caption{Cronograma}
+ \setlength{\belowcaptionskip}{8pt}
+ \begin{tabular}{|>{\centering\arraybackslash}m{3.0cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|}
+
+ 
+ \hline
+\textbf{Atividades} &  \textbf{Jan} &  \textbf{Fev}&  \textbf{Mar}&  \textbf{Abr}&  \textbf{Mai}&  \textbf{Jun}&  \textbf{Jul}&  \textbf{Ago}&  \textbf{Set}&  \textbf{Out}&  \textbf{Nov}&  \textbf{Dez} \\
+\hline
+\hline
+Introdução  & &X &X &X & & & & & & & &  \\
+\hline
+Objetivos  & & & X&X &X & & & & & & &  \\
+\hline
+Fundamentação Teórica  & & & &X &X & X& & & & & &  \\
+\hline
+Detalhamento Metodologia  & & & & &X &X &X & & & & &  \\
+\hline
+Análise de Resultados  & & & & & & & &X & X&X & &  \\
+\hline
+Conclusão  & & & & & & & & & X& X& X&  \\
+\hline
+Implementações  & & & &X &X &X & X& X& X& X& X&  \\
+\hline
+\hline	
+
+\end{tabular}\\
+  \label{tab:redesmundoreal}
+\end{table}

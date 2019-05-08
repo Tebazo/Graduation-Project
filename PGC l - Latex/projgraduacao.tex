@@ -1,0 +1,180 @@
+ %=================================================
+%Modelo de monografia
+%Autor: Andre Filipe M. Batista
+%todos os direitos reservados.
+% GPL -> Use, mas nao deixe de citar :-)
+%=================================================
+
+
+
+\documentclass[a4paper, 12pt, oneside, brazil]{memoir}
+
+
+%--->>>Packages e Configuracoes
+
+\input{config} %%este arquivo contem mais detalhes da configuracao deste modelo
+
+%----------------------------
+%%Evitar linhas órfãns.
+%%Agrad. Ronaldo C. Prati
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\DoubleSpacing
+%----------------------------
+
+
+%##############################################################################################################
+%% INICIO DE DOCUMENTO
+%##############################################################################################################
+
+\begin{document}
+
+%%%%%%%%%%%%%% CAPA %%%%%%%%%%%%%%%%%%%%%%%%%
+\input{capa}
+%%%%%%%%%%%%%%% RESUMO %%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+
+\null\vfill
+
+
+\chapter*{Resumo}
+
+Milhares de trabalhos científicos são desenvolvidos todos os anos em universidades públicas e privadas, entre eles: iniciações cientificas, trabalhos de conclusão de curso e teses de mestrado ou doutorado. O atual método para analisar tais trabalhos, é por meio de bancas avaliadoras, que na maioria das vezes é formada pelo orientador e dois (ou mais) docentes convidados pelo mesmo. Este projeto visa utilizar técnicas de mineração de textos aplicadas na classificação de trabalhos científicos, por meio da leituras de dados não estruturados presentes na Web, a partir dessa classificação, pretende-se identificar as palavras mais relevantes do trabalho. Com o intuito de, gerar uma banca coerente ao assunto abordado no artigo, através da indicação de docentes que atuam na área. 
+	
+
+
+\thispagestyle{plain}
+\setcounter{chapter}{0}%
+
+
+%%%%%%%%%%%%%%% DEMAIS CAPITULOS  %%%%%%%%%%%
+
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+
+\pagebreak
+\pagenumbering{arabic}
+\thispagestyle{empty}
+\newcommand{\itemsecao}[1]{\noindent{\textbf #1}}
+\include{introducao}
+%\include{objetivos}
+%\include{capanalisedasredesmario}
+\chapter{Justificativa}
+
+A ideia do projeto surgiu após a indagação de como seria possível aprimorar o método como bancas avaliadoras são formadas nas universidades, com o intuito de automatizar o processo e ao mesmo tempo, indicar docentes que de fato trabalhem na área abordada pelo trabalho. Isso porque, a função da banca não é apenas a de atribuir uma nota, mas também de propor melhorias para o desenvolvimento do trabalho. Essa contribuição é efetiva quando a mesa é composta por profissionais que dominem o tema do projeto.
+
+Atualmente o processo para construção de uma banca é engessado, no qual o orientador do trabalho é responsável por convidar docentes a sua escolha para compor a mesa avaliadora. Porém não é necessário que estes docentes possuam expertise na área de pesquisa apresentada no trabalho, nestes casos, a banca não possuirá uma colaboração positiva para o projeto, já que a análise será superficial, devido a falta de familiaridade com o assunto. Além disso, o processo é burocrático e na maioria das vezes o orientador convida docentes com os quais ele possui maior afinidade, não levando em conta o ramo de atuação do mesmo. 
+
+Com a aplicação de técnicas de mineração de textos, é possível identificar os docentes mais apropriados para qualificar o trabalho em questão de maneira assertiva, evitando assim, a seleção daqueles que não possuem proximidade ao tema abordado. Somado a isso, o processo seria automatizado, retirando a função do orientador de selecionar os docentes da mesa, impossibilitando que critérios pessoais sejam relevantes na decisão.
+
+
+
+
+\chapter{Objetivos}\label{ch:obj}
+
+Será desenvolvido um processo no qual, técnicas de mineração de textos serão aplicadas, afim de identificar os docentes que possuem maior afinidade com a área de pesquisa do trabalho sujeito a avaliação. Para tanto, serão utilizados o Currículo \textit{Lattes}\footnote{A Plataforma Lattes é uma plataforma virtual criada e mantida pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), pela qual integra as bases de dados de currículos, grupos de pesquisa e instituições, em um único sistema de informações, das áreas de Ciência e Tecnologia, atuando no Brasil.} dos docentes, com o intuito de identificar suas principais áreas de pesquisas.
+
+Como objetivo secundário, visa-se realizar um agrupamento de docentes baseado em suas áreas de pesquisas. A ideia é semelhante ao objetivo principal, porém ao invés da leitura de um trabalho, serão analisados os currículos dos docentes e assim associar aqueles possuem maiores semelhanças. Os grupos serão de extrema utilidade, pois atualmente nos sites da UFABC as informações sobre os docentes e suas respectivas áreas de atuações, em sua maioria estão incorretas e/ou desatualizadas. Devido a isso, os discentes acabam enfrentando diversas dificuldades entre elas, a escolha de um professor orientador que atue na área de pesquisa do projeto ou identificar um docente apto a sanar dúvidas referentes a uma determinada área. 
+
+
+\chapter{Metodologia}
+
+Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, serão acessados os currículos \textit{Lattes} dos docentes, identificando as palavras presentes em sua formação acadêmica, área de atuação, projetos de pesquisa, prêmios recebidos, produções realizadas, bancas e orientações. As palavras encontradas na \textit{Plataforma Lattes} serão comparadas com as do trabalho, identificando aquelas que são semelhantes. Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
+
+Sabendo que o processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas secções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}
+
+\section{Identificação do Problema}
+
+Utilizar técnicas de mineração de textos na recomendação dos docentes mais apropriados para comporem a banca avaliadora de um determinado trabalho. Para isso, serão utilizado as informações presentes na \textit{Plataforma Lattes} dos docentes, tais como seus projetos de pesquisas, orientações, trabalhos realizados, entre outras.
+
+\section{Pré-Processamento}
+
+O desafio inicial é verificar que parte da \textit{Plataforma Lattes} contém os dados que deverão ser analisadas pelo processo. Posteriormente, identificar um método ou ferramenta que realize a leitura desse conteúdo e disponibilize para uso.
+
+Para que o processo realizar as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para "limpar" o texto, tais como \textit{stopwords} e \textit{stemming}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
+ 
+%Algumas técnicas serão aplicadas aos dados que se encontram armazenados, eliminando dentro de cada texto as redundâncias e/ou variações morfológicas. O objetivo dessa etapa consiste em transformar o conjunto de documentos em uma base mais limpa, na qual o trabalho de representação, processamento dos dados e a consequente interpretação destes, possam ser realizadas de maneira mais rápida e eficiente \cite{maria2012}.Seguem a descrição de algumas das técnicas usualmente utilizadas na preparação dos dados:
+
+%\subsection{Stopwords}
+
+%No processo de análise dos dados identificam-se palavras com baixa frequência, que podem ser removidas, pois nada acrescentam à representatividade da coleção ou, que sozinhas nada significam, tais como preposições, pronomes, artigos e advérbios.
+
+%\subsection{Stemming}
+
+%\textit{Stemming} é uma técnica de redução de termos a um radical comum, a partir da análise das características gramaticais dos elementos, como grau, número, gênero e desinência. Tem o objetivo de retirar os sufixos e prefixos das palavras, e encontrar a sua forma primitiva. Assim, as palavras no plural ou derivadas são reduzidas a um radical único, à sua raiz, simplificando a representação dos termos envolvidos no documento. Isso implica numa única entrada nos índices, aumentando o desempenho do processo.\cite{maria2012}.
+
+%Dois erros típicos que costumam ocorrer durante o processo de \textit{stemming} são \textit{overstemming} e \textit{understemming}. \textit{Overstemming} ocorre quando não só o sufixo, mas também parte do radical é retirado da palavra. Já \textit{understemming} ocorre quando o sufixo não é removido, ou é apenas removido parcialmente \cite{uber2004}.  
+
+
+\section{Extração de Padrões}\label{sec:ext}
+
+Aqui deverá ser aplicado uma técnica ou modelo matemático para identificar entre as palavras armazenadas, aquelas que serão \textit{key words}  (palavras chave) e assim, serem utilizadas nesta etapa.
+Para cada palavra chave do texto de entrada, será realizada uma comparação entre as palavras chave retiradas da \textit{Plataforma Lattes} dos docentes. Isso posto, os docentes que obtiverem um maior número de correlação, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para preencherem a banca. Visando o objetivo secundário, o processo será similar, porém as palavras chave comparadas serão somente aquelas identificadas na \textit{Plataforma Lattes}, e o objetivo da correlação será o agrupamento daqueles que atuam na mesma área.
+
+
+\section{Pós Processamento}
+
+Tendo em vista a informação extraída, a formação de bancas coerentes com o tema abordado será realizada de maneira simples, pois bastará selecionar os docentes que foram identificados com maior familiaridade ao assunto. Além disso, as informações dos docentes são coletadas de uma página \textit{web}, elas estarão atualizadas de acordo com as publicações e participações em pesquisas de cada um.
+
+
+
+
+\chapter{Cronograma}
+
+Esta secção possui o objetivo de apresentar o cronograma deste projeto. A Tabela \ref{tab:cron} contém uma visão geral das atividades descritas abaixo:
+
+\textbf{(A) - Levantamento Bibliográfico na Área de Mineração de Dados e Textos }- Pesquisar livros e artigos que serão utilizados para o embasamento teórico do projeto;
+
+\textbf{(B) - Estudo de Técnicas de Mineração de Texto} - Identificar qual a melhor técnica a ser utilizada na implementação do processo desejado;
+
+\textbf{(C) - Implementação do Processo} - Etapa na qual a programação do processo ocorrerá;
+
+
+\textbf{(D) - Análise de Resultados}- Identificar se os resultados alcançados foram os esperados, bem como discutir futuras propostas para melhorias;
+
+\textbf{(E) - Escrita do Relatório Técnico} - O desenvolvimento do texto será realizado durante todo o ano, de acordo com o andamento do projeto.
+
+
+\begin{table}[h]
+\centering
+ \caption{Cronograma}
+ \setlength{\belowcaptionskip}{5pt}
+ \begin{tabular}{|>{\centering\arraybackslash}m{3.0cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|>{\centering\arraybackslash}m{0.7cm}|}
+
+ 
+ \hline
+\textbf{Atividades}  &  \textbf{Fev}&  \textbf{Mar}&  \textbf{Abr}&  \textbf{Mai}&  \textbf{Jun}&  \textbf{Jul}&  \textbf{Ago}&  \textbf{Set}&  \textbf{Out}&  \textbf{Nov}&  \textbf{Dez} \\
+\hline
+\hline
+A &X &X &X & & & & & & & &  \\
+\hline
+B & & & &X & X& X&X & & & &  \\
+\hline
+C & & & & &X &X & X& X&X & &  \\
+\hline
+D & & & & & & & & X&X &X &X  \\
+\hline
+E &X &X &X &X &X & X& X& X& X& X& X\\
+\hline
+\hline	
+
+\end{tabular}\\
+  \label{tab:cron}
+\end{table}
+
+%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%
+\bibliographystyle{abnt-alf} %estilo de bibliografia
+\pagebreak
+\renewcommand{\chaptername}{\space} %%limpa o nome ''Capítulo''
+\renewcommand{\thechapter}{R} %%define o capitulo por letra :-)
+\renewcommand{\bibsection}{\chapter{Referências}}
+\bibliography{bibliografia}
+
+%%%%%%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%
+\renewcommand{\thechapter}{A} %%define o capitulo por letra :-)
+
+\pagebreak
+\end{document}

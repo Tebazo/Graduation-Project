@@ -1,0 +1,17 @@
+\chapter*{Resumo}
+
+Um dos tópicos de pesquisa no campo de sistemas multiagentes é a definição de modelos com o objetivo de representar estruturas sociais, tais como as organizações e alianças, de modo a modelar e analisar o comportamento emergente de sistemas abertos. As organizações e alianças são compostas por indivíduos que são relacionados entre si por diferentes tipos de relações possíveis, tais como dependências em relação a metas, os conflitos sobre os recursos, as crenças semelhantes e assim por diante.
+
+ 	Uma questão importante é como representar estas relações. Além disso, semelhante às organizações humanas, estas estruturas sociais são caracterizadas também por um elevado grau de dinamismo. Ao lidar com questões sociais, a área de sistemas multiagentes  inspirou-se principalmente da teoria organizacional da economia e na teoria jurídica, embora menos atenção seja dedicada à área da pesquisa que descreve as relações entre os
+indivíduos dentro das organizações humanas e sua dinâmica. A esta área dá-se o nome de Análise de Redes Sociais.
+
+	A análise de redes sociais emergiu como uma técnica fundamental na moderna sociologia, antropologia, psicologia social, estudos de comunicação, informação ciência, estudos organizacionais, economia, dentre outros. Diversos modelos apresentados na teoria das redes sociais podem ser utilizados na modelagem e análise comportamental de sistemas multiagentes.
+
+	Neste trabalho é proposto um estudo de como a análise de redes complexas, mais especificamente como a teoria das redes sociais pode auxiliar na modelagem de sistemas multiagentes, ao mesmo tempo abordando semelhanças e divergências entre ambas as teorias. As técnicas de análise das redes sociais podem auxiliar na modelagem de comportamentos dos agentes de modo que estes interajam de uma maneira mais social, sendo possível analisar alguns temas sociais em sistemas multiagentes, tais como: liderança, propagação de informações, formação de alianças, relações de confiança, convenções sociais, etc.
+
+\begin{graybox}
+
+teste
+
+\end{graybox}
+

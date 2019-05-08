@@ -1,0 +1,12 @@
+\babel@toc {brazilian}{}
+\contentsline {chapter}{Sum\'ario}{iv}{section*.2}% 
+\contentsline {chapter}{\chapternumberline {1}Introdu\c c\~ao}{1}{chapter.1}% 
+\contentsline {chapter}{\chapternumberline {2}Justificativa}{4}{chapter.2}% 
+\contentsline {chapter}{\chapternumberline {3}Objetivos}{6}{chapter.3}% 
+\contentsline {chapter}{\chapternumberline {4}Metodologia}{7}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Identifica\c c\~ao do Problema}{7}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Pr\'e-Processamento}{8}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Extra\c c\~ao de Padr\~oes}{8}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}P\'os Processamento}{9}{section.4.4}% 
+\contentsline {chapter}{\chapternumberline {5}Cronograma}{10}{chapter.5}% 
+\contentsline {chapter}{\chapternumberline {R}Refer\^encias}{11}{chapter.6}% 
