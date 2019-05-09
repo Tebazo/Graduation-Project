@@ -80,8 +80,8 @@ Será desenvolvido um processo no qual, técnicas de mineração de textos serão apl
 Como objetivo secundário, visa-se realizar um agrupamento de docentes baseado em suas áreas de pesquisas. A ideia é semelhante ao objetivo principal, porém ao invés da leitura de um trabalho, serão analisados os currículos dos docentes e assim associar aqueles possuem maiores semelhanças. Os grupos serão de extrema utilidade, pois atualmente nos sites da UFABC as informações sobre os docentes e suas respectivas áreas de atuações, em sua maioria estão incorretas e/ou desatualizadas. Devido a isso, os discentes acabam enfrentando diversas dificuldades entre elas, a escolha de um professor orientador que atue na área de pesquisa do projeto ou identificar um docente apto a sanar dúvidas referentes a uma determinada área. 
 
 
-\chapter{Metodologia}
 
+\chapter{Metodologia}\label{cap:met}
 Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, serão acessados os currículos \textit{Lattes} dos docentes, identificando as palavras presentes em sua formação acadêmica, área de atuação, projetos de pesquisa, prêmios recebidos, produções realizadas, bancas e orientações. As palavras encontradas na \textit{Plataforma Lattes} serão comparadas com as do trabalho, identificando aquelas que são semelhantes. Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
 
 Sabendo que o processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas secções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}
@@ -96,17 +96,7 @@ O desafio inicial é verificar que parte da \textit{Plataforma Lattes} contém os 
 
 Para que o processo realizar as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para "limpar" o texto, tais como \textit{stopwords} e \textit{stemming}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
  
-%Algumas técnicas serão aplicadas aos dados que se encontram armazenados, eliminando dentro de cada texto as redundâncias e/ou variações morfológicas. O objetivo dessa etapa consiste em transformar o conjunto de documentos em uma base mais limpa, na qual o trabalho de representação, processamento dos dados e a consequente interpretação destes, possam ser realizadas de maneira mais rápida e eficiente \cite{maria2012}.Seguem a descrição de algumas das técnicas usualmente utilizadas na preparação dos dados:
 
-%\subsection{Stopwords}
-
-%No processo de análise dos dados identificam-se palavras com baixa frequência, que podem ser removidas, pois nada acrescentam à representatividade da coleção ou, que sozinhas nada significam, tais como preposições, pronomes, artigos e advérbios.
-
-%\subsection{Stemming}
-
-%\textit{Stemming} é uma técnica de redução de termos a um radical comum, a partir da análise das características gramaticais dos elementos, como grau, número, gênero e desinência. Tem o objetivo de retirar os sufixos e prefixos das palavras, e encontrar a sua forma primitiva. Assim, as palavras no plural ou derivadas são reduzidas a um radical único, à sua raiz, simplificando a representação dos termos envolvidos no documento. Isso implica numa única entrada nos índices, aumentando o desempenho do processo.\cite{maria2012}.
-
-%Dois erros típicos que costumam ocorrer durante o processo de \textit{stemming} são \textit{overstemming} e \textit{understemming}. \textit{Overstemming} ocorre quando não só o sufixo, mas também parte do radical é retirado da palavra. Já \textit{understemming} ocorre quando o sufixo não é removido, ou é apenas removido parcialmente \cite{uber2004}.  
 
 
 \section{Extração de Padrões}\label{sec:ext}
@@ -118,6 +108,113 @@ Para cada palavra chave do texto de entrada, será realizada uma comparação entre
 \section{Pós Processamento}
 
 Tendo em vista a informação extraída, a formação de bancas coerentes com o tema abordado será realizada de maneira simples, pois bastará selecionar os docentes que foram identificados com maior familiaridade ao assunto. Além disso, as informações dos docentes são coletadas de uma página \textit{web}, elas estarão atualizadas de acordo com as publicações e participações em pesquisas de cada um.
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Fundamentação Teórica}
+
+Neste Capítulo serão discutidos conceitos e técnicas referentes a Mineração de Textos. As etapas da MT apresentadas no Capítulo \ref{cap:met} serão utilizadas para identificar em qual momento do processo cada técnica é aplicada.
+
+\section{Pré-Processamento}
+
+ O objetivo dessa etapa consiste em transformar o conjunto de documentos em uma base mais limpa, na qual o trabalho de representação, processamento dos dados e a consequente interpretação destes, possam ser realizadas de maneira mais rápida e eficiente \cite{maria2012}. Segue a descrição de algumas das técnicas usualmente utilizadas na preparação dos dados:
+ 
+\subsection{Identificação de Termos} 
+
+\subsubsection{Identificação de Termos Simples}
+
+É aplicado um analisador léxico para identificar as palavras presentes no documento, eliminando símbolos e caracteres indesejados, tais como hífen e vírgula. Nesta etapa os termos podem ser convertidos para letras minusculas ou maiúsculas e tabulações convertidas a espaços simples, adequando os temos de acordo com a objetivo da análise \cite{ana2007}.
+
+\subsubsection{Identificação de Termos Compostos}
+
+Há diversos termos que possuem diferentes significados quando descritos por meio da utilização de duas ou mais palavras adjacentes, são conhecidos como \textit{Word-phrase formation}, podemos citar como exemplo o termo "Inteligência Artificial". Uma maneira de reconhecer estas palavras, consiste em identificar os termos que co-ocorrem com a maior frequência no documento, e posteriormente validar ou não as expressões \cite{ana2007}.  
+ 
+ 
+ 
+\subsection{Stopwords}
+
+
+No processo de análise de textos, é necessário identificar palavras que não demonstram relevância, possibilitando assim a sua remoção. Pode-se citar como exemplo os artigos, preposições, pronomes, advérbios e outras classes de palavras auxiliares. Estes termos formam a maior parte dos textos da língua portuguesa, não agregando valor ao entendimento do texto analisado \cite{maria2012}.
+
+As \textit{stopwords} formam um "dicionário negativo", também conhecido como \textit{stoplist}. Assim, ao realizar a análise de um texto, as palavras   encontradas no dicionário são identificadas como \textit{stopwords}, resultando na remoção dos termos \cite{ana2007}.
+
+
+\subsection{Stemming}
+
+
+\textit{Stemming} é uma técnica de redução de termos a um radical comum, a partir da análise das características gramaticais dos elementos, como grau, número, gênero e desinência. Tem o objetivo de retirar os sufixos e prefixos das palavras, e encontrar a sua forma primitiva. Assim, as palavras no plural ou derivadas são reduzidas a um radical único, simplificando a representação dos termos envolvidos no documento \cite{maria2012}.
+
+Dois erros típicos que costumam ocorrer durante o processo de \textit{stemming} são \textit{overstemming} e \textit{understemming}. \textit{Overstemming} ocorre quando não só o sufixo, mas também parte do radical é retirado da palavra. Já \textit{understemming} ocorre quando o sufixo não é removido, ou é apenas removido parcialmente \cite{uber2004}.  
+
+Há diversos algoritmos de \textit{Stemming} desenvolvidos, porém eles devem ser projetados para o processamento de um idioma em específico. Como neste projeto serão analisados textos na língua portuguesa, destacam-se três algoritmos: a versão para português do algoritmo de PORTER \cite{PORTER2005}, o Removedor de Sufixo da língua Portuguesa (RSLP), proposto por Orengo e Huyck \cite{orengo2001stemming} e o algoritmo STEMBR, proposto por Alvares \cite{alvares2005stembr} \cite{maria2012}.
+
+Foram realizados estudos para identificar a técnica mais eficiente, comparando o desempenho dos três algoritmos citados anteriormente. O RSLP foi considerado o mais eficiente devido a menor taxa de erros de \textit{overstemming} e \textit{understemming} \cite{orengo2001stemming}.
+
+
+\section{Extração de Padrões}
+
+Essa é a principal etapa do processo de Mineração de Textos, nela ocorre a busca efetiva por conhecimentos inovadores e úteis a partir dos dados textuais. A aplicação dos algoritmos, fundamentados em técnicas que procuram, segundo determinados paradigmas, visa explorar os dados de forma a produzir modelos de conhecimento. 
+
+\subsection{Keywords}
+
+As palavras mais frequente em um texto (com exceção das \textit{stopwords}) geralmente possuem um maior significado para o entendimento do assunto abordado no documento. Há duas maneiras de calcular a relevância destas palavras, a primeira delas é por meio da frequência que ela aparece no texto ou por meio da sua posição sintática. 
+
+Neste projeto será utilizado a análise baseada na frequência, mediante a atribuição de um "peso" para cada palavra. Há diversas maneiras de realizar o cálculo deste peso, a seguir serão descritos três métodos: frequência absoluta, frequência relativa e frequência inversa de documentos \cite{ana2007}.
+
+\subsubsection{Frequência Absoluta}
+
+Também conhecido como \textit{term frequency}(TF) é a técnica mais simples de se calcular o peso de uma palavra. Basta contabilizar a quantidade de vezes que o termo aparece no documento. Porém, por não levar em conta o tamanho do documento, palavras pouco frequentes em um pequeno texto, podem ter o mesmo peso que palavras muito frequentes em grandes documentos \cite{ana2007}.
+
+
+
+\subsubsection{Frequência Relativa}
+
+Segundo Santos \cite{wives1999estudo} esta é a técnica mais comum para a identificação do quanto uma determinada palavra é importante para um documento, de acordo com o número de ocorrências desta palavra no mesmo. Segue a fórmula da frequência relativa:
+
+\begin{equation}
+	F_{relX} = \frac{F_{absX}}{N}
+\end{equation}
+
+Onde:
+
+$F_{rel}$: frequência relativa de uma palavra x em um documento; 
+
+$F_{abs}$: número de vezes que a palavra aparece no documento; 
+
+N: número total de palavras no documento;\
+
+
+\subsubsection{Frequência Inversa de Documentos}
+
+
+Essa técnica leva em conta a quantidade de documentos nos quais o termo aparece, somado a frequência absoluta dos termos. Assim, as palavras que aparecem em poucos documentos têm sua importância aumentada, pois geralmente são as mais discriminantes \cite{ana2007}. A fórmula para o cálculo da  frequência inversa é:
+
+
+
+\begin{equation}
+	Peso_{td} = \frac{Freq_{td}}{DocFreq_{td}}
+\end{equation}
+
+Onde:
+
+$Peso_{td}$: grau de relação entre o termo \textit{t} e o documento \textit{d};
+
+$Freq_{td}$: número de vezes que o termo \textit{t} aparece no documento \textit{d};
+
+$DocFreq_{td}$: número de documentos que o termo \textit{t} aparece;
+
+
+
+
+
 
 
 
