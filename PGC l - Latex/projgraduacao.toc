@@ -8,5 +8,17 @@
 \contentsline {section}{\numberline {4.2}Pr\'e-Processamento}{8}{section.4.2}% 
 \contentsline {section}{\numberline {4.3}Extra\c c\~ao de Padr\~oes}{8}{section.4.3}% 
 \contentsline {section}{\numberline {4.4}P\'os Processamento}{9}{section.4.4}% 
-\contentsline {chapter}{\chapternumberline {5}Cronograma}{10}{chapter.5}% 
-\contentsline {chapter}{\chapternumberline {R}Refer\^encias}{11}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {5}Fundamenta\c c\~ao Te\'orica}{10}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Pr\'e-Processamento}{10}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Identifica\c c\~ao de Termos}{10}{subsection.5.1.1}% 
+\contentsline {subsubsection}{\numberline {5.1.1.1}Identifica\c c\~ao de Termos Simples}{10}{subsubsection.5.1.1.1}% 
+\contentsline {subsubsection}{\numberline {5.1.1.2}Identifica\c c\~ao de Termos Compostos}{11}{subsubsection.5.1.1.2}% 
+\contentsline {subsection}{\numberline {5.1.2}Stopwords}{11}{subsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.1.3}Stemming}{11}{subsection.5.1.3}% 
+\contentsline {section}{\numberline {5.2}Extra\c c\~ao de Padr\~oes}{12}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Keywords}{12}{subsection.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.1.1}Frequ\^encia Absoluta}{13}{subsubsection.5.2.1.1}% 
+\contentsline {subsubsection}{\numberline {5.2.1.2}Frequ\^encia Relativa}{13}{subsubsection.5.2.1.2}% 
+\contentsline {subsubsection}{\numberline {5.2.1.3}Frequ\^encia Inversa de Documentos}{13}{subsubsection.5.2.1.3}% 
+\contentsline {chapter}{\chapternumberline {6}Cronograma}{15}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {R}Refer\^encias}{16}{chapter.7}% 

@@ -2,8 +2,12 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: projgraduacao.aux
 A level-1 auxiliary file: introducao.aux
 The style file: abnt-alf.bst
 Database file #1: bibliografia.bib
+Warning--I didn't find a database entry for "PORTER2005"
+Warning--I didn't find a database entry for "orengo2001stemming"
+Warning--I didn't find a database entry for "alvares2005stembr"
 +---------------------------------------------------------+
 | Estilo bibliográfico abnt-alf.bst versão 1.45           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
+(There were 3 warnings)

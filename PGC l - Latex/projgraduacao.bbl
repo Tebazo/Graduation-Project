@@ -61,4 +61,17 @@ Dissertação (Mestrado) --- Universidade Federal do Rio de Janeiro, 2012.}
 \emph{Revista de Sistemas de Informa{\c{c}}{\~a}o da FSMA}, v.~7, p. 7--21,
   2011.}
 
+\bibitem[Uber 2004]{uber2004}
+\abntrefinfo{Uber}{UBER}{2004}
+{UBER, J.~L. Descoberta de conhecimento com o uso de text mining aplicada ao
+  sac.
+Universidade Regional de Blumenau, 2004.}
+
+\bibitem[Wives 1999]{wives1999estudo}
+\abntrefinfo{Wives}{WIVES}{1999}
+{WIVES, L.~K. Um estudo sobre agrupamento de documentos textuais em
+  processamento de informa{\c{c}}{\~o}es n{\~a}o estruturadas usando
+  t{\'e}cnicas de" clustering".
+1999.}
+
 \end{thebibliography}
