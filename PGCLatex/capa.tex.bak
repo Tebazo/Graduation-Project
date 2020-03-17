@@ -1,0 +1,50 @@
+
+
+\thispagestyle{empty}
+\pagenumbering{roman}
+\DeclareGraphicsExtensions{.jpg,.pdf,.svg,.mps,.png} % Tipos de arquivos de imagem que serão utilizados
+
+%%%%%%%%%%%%%%% CAPA %%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+{\LARGE
+\vspace*{0.1cm}
+\textbf{André Filipe de Moraes Batista}}\\
+
+
+\vspace{1.0cm}
+\begin{figure}[H]
+\begin{center}
+
+\fbox{\includegraphics[scale=0.8]{imagens/rede}}
+\end{center}
+\end{figure}
+{\LARGE
+\textbf{Um Estudo sobre a Perspectiva da Modelagem de Sistemas Multiagentes via a Teoria das Redes Sociais}}
+
+\end{center}
+
+
+\vspace{1.0cm}
+
+\apresentacao{Monografia apresentada ao Centro de Matemática, Computação e Cognição - CMCC/UFABC como parte dos requisitos necessários à obtenção do título de Bacharel em Ciência da Computação.}
+
+\vspace{0.3cm}
+    {\large
+    \noindent
+    \textbf{Orientadora:} Prof.$^{a}$  Dr.$^{a}$ Maria das Graças Bruno Marietto}\\
+
+
+
+\vspace*{\stretch{1}} %%posicionamento para colocar data
+
+
+\begin{center}
+
+{\large
+Universidade Federal do ABC\\
+\hoje}
+\end{center}
+
+\thispagestyle{empty}
+
+\newpage

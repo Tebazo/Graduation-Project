@@ -1,0 +1,3 @@
+baseado em um artigo que apresenta um método de otimização para problemas de logica de predicado
+
+SUBIR NO GITHUB

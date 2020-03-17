@@ -1,0 +1,102 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.45 }
+
+\bibitem[Aggarwal e Zhai 2012]{aggarwal2012mining}
+\abntrefinfo{Aggarwal e Zhai}{AGGARWAL; ZHAI}{2012}
+{AGGARWAL, C.~C.; ZHAI, C. \emph{Mining text data}. [S.l.]: Springer Science
+  Business Media, 2012.}
+
+\bibitem[Alvares, Garcia e Ferraz 2005]{alvares2005stembr}
+\abntrefinfo{Alvares, Garcia e Ferraz}{ALVARES; GARCIA; FERRAZ}{2005}
+{ALVARES, R.~V.; GARCIA, A. C.~B.; FERRAZ, I. Stembr: a stemming algorithm for
+  the brazilian portuguese language. In:  SPRINGER. \emph{Portuguese Conference
+  on Artificial Intelligence}. [S.l.], 2005. p. 693--701.}
+
+\bibitem[Baker, Isotani e Carvalho 2011]{baker2011mineraccao}
+\abntrefinfo{Baker, Isotani e Carvalho}{BAKER; ISOTANI; CARVALHO}{2011}
+{BAKER, R.; ISOTANI, S.; CARVALHO, A. Minera{\c{c}}ao de dados educacionais:
+  Oportunidades para o brasil.
+\emph{Brazilian Journal of Computers in Education}, v.~19, n.~02, p.~03, 2011.}
+
+\bibitem[Camilo e Silva 2009]{camilo2009}
+\abntrefinfo{Camilo e Silva}{CAMILO; SILVA}{2009}
+{CAMILO, C.~O.; SILVA, J.~C. da. \emph{Minera{\c{c}}{\~a}ode Dados: Conceitos,
+  Tarefas, M{\'e}todos e Ferramentas}.
+[S.l.], 2009.}
+
+\bibitem[Feldman e Sanger 2006]{feldman06}
+\abntrefinfo{Feldman e Sanger}{FELDMAN; SANGER}{2006}
+{FELDMAN, R.; SANGER, J. \emph{Text Mining Handbook: Advanced Approaches in
+  Analyzing Unstructured Data}. [S.l.: s.n.], 2006.}
+
+\bibitem[Junior 2007]{junior2007desenvolvimento}
+\abntrefinfo{Junior}{JUNIOR}{2007}
+{JUNIOR, J. R.~C. Desenvolvimento de uma metodologia para minera{\c{c}}{\~a}o
+  de textos.
+\emph{Departamento de Engenharia El{\'e}trica, Pont{\'\i}fica Universidade
+  Cat{\'o}lica do Rio de Janeiro}, 2007.}
+
+\bibitem[Morais e Ambr{\'o}sio 2007]{ana2007}
+\abntrefinfo{Morais e Ambr{\'o}sio}{MORAIS; AMBR{\'O}SIO}{2007}
+{MORAIS, E. A.~M.; AMBR{\'O}SIO, A. P.~L. \emph{Minera{\c{c}}{\~a}o de Textos}.
+[S.l.], 2007.}
+
+\bibitem[Ohsawa, Benson e Yachida 1998]{ohsawa1998keygraph}
+\abntrefinfo{Ohsawa, Benson e Yachida}{OHSAWA; BENSON; YACHIDA}{1998}
+{OHSAWA, Y.; BENSON, N.~E.; YACHIDA, M. Keygraph: Automatic indexing by
+  co-occurrence graph based on building construction metaphor. In:  IEEE.
+  \emph{Proceedings IEEE International Forum on Research and Technology
+  Advances in Digital Libraries-ADL'98-}. [S.l.], 1998. p. 12--18.}
+
+\bibitem[Orengo e Huyck 2001]{orengo2001stemming}
+\abntrefinfo{Orengo e Huyck}{ORENGO; HUYCK}{2001}
+{ORENGO, V.~M.; HUYCK, C. A stemming algorithm for the portuguese language. In:
+   IEEE. \emph{Proceedings Eighth Symposium on String Processing and
+  Information Retrieval}. [S.l.], 2001. p. 186--193.}
+
+\bibitem[Passini 2012]{maria2012}
+\abntrefinfo{Passini}{PASSINI}{2012}
+{PASSINI, M. L.~C.
+\emph{MINERA{\c{C}}{\~A}O DE TEXTOS PARA ORGANIZA{\c{C}}{\~A}O DE DOCUMENTOS EM
+  CENTRAIS DE ATENDIMENTO}.
+Dissertação (Mestrado) --- Universidade Federal do Rio de Janeiro, 2012.}
+
+\bibitem[Pezzini 2017]{pezzini2017mineraccao}
+\abntrefinfo{Pezzini}{PEZZINI}{2017}
+{PEZZINI, A. Minera{\c{c}}{\~a}o de textos: Conceito, processo e
+  aplica{\c{c}}{\~o}es.
+\emph{REAVI-Revista Eletr{\^o}nica do Alto Vale do Itaja{\'\i}}, v.~5, n.~8, p.
+  58--61, 2017.}
+
+\bibitem[Portuguese stemming algorithm]{PORTER2005}
+\abntrefinfo{Portuguese\ldots}{PORTUGUESE\ldots}{}
+{PORTUGUESE stemming algorithm.
+\url{http://snowball.tartarus.org/algorithms/portuguese/stemmer.html}.
+Acessado: 09/05/2019.}
+
+\bibitem[Rezende, Marcacini e Moura 2011]{rezende2011uso}
+\abntrefinfo{Rezende, Marcacini e Moura}{REZENDE; MARCACINI; MOURA}{2011}
+{REZENDE, S.~O.; MARCACINI, R.~M.; MOURA, M.~F. O uso da minera{\c{c}}{\~a}o de
+  textos para extra{\c{c}}{\~a}o e organiza{\c{c}}{\~a}o n{\~a}o supervisionada
+  de conhecimento.
+\emph{Revista de Sistemas de Informa{\c{c}}{\~a}o da FSMA}, v.~7, p. 7--21,
+  2011.}
+
+\bibitem[Uber 2004]{uber2004}
+\abntrefinfo{Uber}{UBER}{2004}
+{UBER, J.~L. Descoberta de conhecimento com o uso de text mining aplicada ao
+  sac.
+Universidade Regional de Blumenau, 2004.}
+
+\bibitem[Wives 1999]{wives1999estudo}
+\abntrefinfo{Wives}{WIVES}{1999}
+{WIVES, L.~K. Um estudo sobre agrupamento de documentos textuais em
+  processamento de informa{\c{c}}{\~o}es n{\~a}o estruturadas usando
+  t{\'e}cnicas de" clustering".
+1999.}
+
+\end{thebibliography}
