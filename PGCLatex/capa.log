@@ -1,0 +1,685 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.19)  27 APR 2020 22:58
+entering extended mode
+**./capa.tex
+(capa.tex
+LaTeX2e <2018-12-01>
+! Undefined control sequence.
+l.5 \DeclareGraphicsExtensions
+                              {.jpg,.pdf,.svg,.mps,.png} % Tipos de arquivos...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \DeclareGraphicsExtensions{.
+                                jpg,.pdf,.svg,.mps,.png} % Tipos de arquivos...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 5--6
+[] 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{center}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--8
+[] 
+ []
+
+! Undefined control sequence.
+l.9 {\LARGE
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (30.18733pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 Mario 
+ []
+
+
+Overfull \hbox (31.63315pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 Caires 
+ []
+
+
+Overfull \hbox (36.3401pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 Pereira 
+ []
+
+! Undefined control sequence.
+l.16 {\LARGE
+            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...s na Classificação de Artigos Científicos}
+                                                  }
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...s na Classificação de Artigos Científicos}
+                                                  }
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...s na Classificação de Artigos Científicos}
+                                                  }
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...s na Classificação de Artigos Científicos}
+                                                  }
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+Overfull \hbox (35.09146pt too wide) in paragraph at lines 17--18
+ []\OT1/cmr/bx/n/10 Estudo 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (26.43176pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 Ticas 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (24.3332pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 Min- 
+ []
+
+
+Overfull \hbox (15.59714pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 era 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (28.60402pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 Texto 
+ []
+
+
+Overfull \hbox (25.30542pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 Apli- 
+ []
+
+
+Overfull \hbox (27.21646pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 cadas 
+ []
+
+
+Overfull \hbox (11.97908pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 na 
+ []
+
+
+Overfull \hbox (25.45955pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 Clas- 
+ []
+
+
+Overfull \hbox (11.56381pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 si- 
+ []
+
+
+Overfull \hbox (17.09016pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 fica 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (17.26381pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 Ar- 
+ []
+
+
+Overfull \hbox (11.49994pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 ti- 
+ []
+
+
+Overfull \hbox (16.03601pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 gos 
+ []
+
+
+Overfull \hbox (31.14568pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 Cient- 
+ []
+
+
+Overfull \hbox (15.39713pt too wide) in paragraph at lines 17--18
+ \OT1/cmr/bx/n/10 cos 
+ []
+
+! Undefined control sequence.
+l.24 \apresentacao
+                  {Projeto de Graduação em Computação submetido à
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \apresentacao{Projeto de Graduação
+                                        em Computação submetido à
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ...entacao{Projeto de Graduação em Computação
+                                                   submetido à
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 Un
+       iversidade Federal do ABC para a
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 obtenção
+              dos créditos na disciplina Projeto de Graduação em Computação ...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no r in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 obtenção dos crédi
+                       tos na disciplina Projeto de Graduação em Computação ...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...réditos na disciplina Projeto de Graduação
+                                                   em Computação III do curs...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...ciplina Projeto de Graduação em Computação
+                                                   III do curso de Ciência
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no I in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no i in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...duação em Computação III do curso de Ciênc
+                                                  ia
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 da Computação
+                  }
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--28
+[]
+ []
+
+! Undefined control sequence.
+l.30     {\large
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+
+! Package inputenc Error: Invalid UTF-8 byte "F5.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...Orientador:} Prof  Dr Thiago Ferreira Covõ
+                                                  es}\\
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+
+Overfull \hbox (58.04137pt too wide) in paragraph at lines 31--33
+\OT1/cmr/bx/n/10 Orientador:
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 39--39
+[] 
+ []
+
+! Undefined control sequence.
+l.41 {\large
+            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no C in font nullfont!
+! Undefined control sequence.
+<recently read> \hoje 
+                      
+l.43 \hoje
+          }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \newpage
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{C:/Users/mario/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+! Emergency stop.
+<*> ./capa.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 19 strings out of 492946
+ 223 string characters out of 3126266
+ 58027 words of memory out of 3000000
+ 4013 multiletter control sequences out of 15000+200000
+ 3948 words of font info for 15 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 19i,4n,14p,129b,128s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

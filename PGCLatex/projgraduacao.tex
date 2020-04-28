@@ -422,13 +422,12 @@ O diferencial deste método é a extração de palavras chaves de documentos únicos,
 \chapter{Análise de Resultados}
 
 \section{Considerações Iniciais}
-Neste capítulo são descritos e analisados os experimentos realizados na avaliação de performance do método KeyGraph. Para tanto, foram selecionados dez docentes, sendo eles: Cristiane Sato, Denis Fantinato, Emilio Francesquini, Fabrício Olivetti, Guilherme Mota, Harlen Bargatelo, João Gois, Maycon Sambinelli, Raphael Camargo e Thiago Covões. Apesar de todos serem da área da Ciência da Computação, possuem linhas de pesquisas distintas. Harlen Bargatelo e João Gois ambos atuam no campo de Computação Gráfica, outro grupo que possui linha de pesquisa em comum são Guilherme Mota, Cristiane Sato e Maycon Sambinelli com pesquisas voltadas para a área de Teoria dos Grafos e Matemática da Computação. Dois docentes que apesar de não trabalharem na mesma área, estão relacionadas são Emilio Francesquini com projetos em Computação Paralela e Sistemas Distribuídos e Raphael Camargo atuando com Neurociência Computacional. Por fim, Thiago Covões possui similaridade com Mineração de Dados enquanto Fabrício Olivetti e Denis Fantinato estudam a área de Inteligência Artificial.
+Neste capítulo são descritos e analisados os experimentos realizados na avaliação de performance do método KeyGraph. Para tanto, foram selecionados dez docentes, sendo eles: Cristiane Sato, Denis Fantinato, Emilio Francesquini, Fabrício Olivetti, Guilherme Mota, Harlen Bargatelo, João Gois, Maycon Sambinelli, Raphael Camargo e Thiago Covões. Apesar de todos serem da área da Ciência da Computação, possuem linhas de pesquisas distintas. Harlen Bargatelo e João Gois ambos atuam no campo de Computação Gráfica, outro grupo que possui linha de pesquisa em comum são Guilherme Mota, Cristiane Sato e Maycon Sambinelli, voltados para Teoria dos Grafos e Matemática da Computação. Dois docentes que apesar de não trabalharem na mesma área, estão relacionadas são Emilio Francesquini com projetos em Computação Paralela e Sistemas Distribuídos e Raphael Camargo atuando com Neurociência Computacional. Por fim, Thiago Covões possui similaridade com Mineração de Dados enquanto Fabrício Olivetti e Denis Fantinato estudam a área de Inteligência Artificial.
 
 
-Foram selecionados 5 artigos retirados das seguintes conferências: Anais do Encontro
-Nacional de Inteligência Artificial e Computacional (ENIAC), Escola Nacional de Alto Desempenho (ERAD), Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBRT), Anais Estendidos da Conference on Graphics, Patterens and Images(SIBGRAPI) e Anais do Encontro de Teoria da Computação (ETC). A seleção destes foi aleatória, porém focado em coletar artigos de diferentes áreas de pesquisas. 
+Foi realizado a seleção de 10 artigos que discutissem diferentes áreas de pesquisas da Ciência da Computação. Os mesmos foram escolhidos dentre múltiplas  conferências, sendo elas: Anais do Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), Escola Nacional de Alto Desempenho (ERAD), Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBRT), Anais Estendidos da Conference on Graphics, Patterens and Images(SIBGRAPI) e Anais do Encontro de Teoria da Computação (ETC). Os nomes dos artigos e suas respectivas conferências são apresentados abaixo:
 
-Os artigos selecionados foram:
+
 
 \begin{itemize}
 \item "Sistema de medição e análise de qualidade de redes celulares móveis" (SBRT)
@@ -446,44 +445,56 @@ Os artigos selecionados foram:
 
 \section{Metodologia}
 
-Para facilitar a distinção entre o grupo de texto que está sendo referenciado, adotou-se os termos texto-base e texto-avaliado. Sendo o texto-base, referente aos docentes e texto-avaliado ao artigo que está sob análise. Vale ressaltar que todos os textos utilizados neste experimento recebeu um tratamento, ou seja, passaram por um processo de normalização, remoção de acentos, \textit{stemming} e retirada de \textit{stopwords}.
+No decorrer do capítulo é abordado constantemente dois conjuntos de textos. Para facilitar a distinção entre ele, adotou-se os termos texto-base e texto-avaliado. Sendo o texto-base, relativo aos docentes e texto-avaliado ao artigo que está sob análise. Vale ressaltar que todos os textos utilizados neste experimento receberam um tratamento, por meio do processo de normalização, remoção de acentos, \textit{stemming} e retirada de \textit{stopwords}.
 
-Para a construção do texto-base, utilizou-se as dissertações dos docentes, ou seja, cada um possui respectivamente, o seu trabalho de mestrado em seu texto-base. Feito isso, para cada docente, calculou-se a Frequência Relativa (TF) de todos os termos do texto-base armazenando-os. Isso porque, escolheu-se adotar a Frequência Inversa de Documentos (TFIDF) nos teste, e o TF pertence ao cálculo. Em seguida, calcula-se o Inverso da Frequência do Documento (IDF), baseado-se na coleção de todos os textos-base. Por ultimo, é calculado o TFIDF para todos os termos, e são armazenado em uma matriz, na qual cada linha representa um docente e cada coluna um termo do texto-base. Para um melhor entendimento, foi desenvolvido um fluxograma das etapas na Figura \ref{flux}.
+Com objetivo de comparação e avaliação dos resultados, todos os textos-avaliado foram submetidos à duas metodologias: TFIDF e KeyGraph. Inicialmente será discorrido sobre o TFIDF e como são as etapas de tratamento de cada um dos conjuntos de textos. Em seguida, é apresentado o KeyGraph e como é realizado a sua integração com o TFIDF. Por fim, os resultados dos métodos são comparado por meio da similaridade de cossenos, e dispostos na forma de mapas de calor para uma melhor visualização.
+
+Para a construção do texto-base, utilizou-se as dissertações dos docentes, ou seja, cada um possui respectivamente o seu trabalho de mestrado em seu texto-base. Feito isso, é computado a Frequência Relativa (TF) de todos os termos do texto-base. Em seguida, calcula-se o Inverso da Frequência do Documento (IDF), baseando-se na coleção de todos os textos-base. Por fim, para todos os termos multiplica-se o TF com o seu respectivo IDF, resultando no TFIDF. Da mesma forma o texto-avaliado é submetido aos procedimentos descritos, com a diferença que o IDF é o mesmo previamente calculado no texto-base, uma vez que o texto-avaliado não possui uma coleção. Caso haja um termo no texto-avaliado que não se encontra na coleção dos textos-base, é atribuído o valor 0 de IDF ao mesmo. Para um melhor entendimento foi desenvolvido um fluxograma das etapas na Figura \ref{flux}.
 
 \begin{figure}[h!]
 \centering
 \includegraphics{fluxograma}
-\caption{Fluxograma}
+\caption{Fluxograma TFIDF}
 \label{flux}
 \end{figure}
 
- 
 
-O texto-avaliado é então submetido ao método do KeyGraph para a extração de suas palavras chave e calcula-se o TF para cada um dos termos encontrados. Em seguida, cálcula-se o IDF destes termos, utilizando a coleção do texto-base no cálculo. Para finalizar multiplica-se o TF pelo IDF encontrando assim, o TFIDF do texto-avaliado. Completada esta etapa, é realizado uma comparação das palavras encontradas no texto-avaliado com aquelas previamente extraídas do texto-base, mantendo somente as que ocorrem em ambos os casos.
 
-A similaridade entre as duas bases de textos é realizado por meio da função de similaridade de cossenos. O vetor com os TFIDF do texto-avaliado é comparado com cada vetor de TFIDF de docentes, calculando a sua respectiva similaridade. Para finalizar, ordenam-se os resultados, e os docentes que apresentarem maiores similaridade, possuem a maior afinidade com o assunto abordado no texto-avaliado.
+O texto-avaliado é então submetido ao método do KeyGraph para a extração de suas palavras-chave. Na sequência é aplicado o mesmo procedimento do TFIDF, porém ao invés de utilizar o texto-avaliado é considerado os termos extraídos pelo KeyGraph, conforme apresentado na Figura \ref{flux_key}.
 
-Com objetivo de comparação e avaliação de resultados, todos os textos-avaliados foram também submetidos ao método do TFIDF, sem a extração de palavras chave por meio do KeyGraph, igualmente ao procedimento aplicado no texto-base. Os resultados de cada artigo selecionado serão apresentados na sequência, comparando o resultado de similaridade obtido utilizando a metodologia do TFIDF com a do KeyGraph.
 
-Para uma melhor análise foram utilizados diferentes parâmetros entre as metodologias TFIDF e Keygraph, conforme apresetado abaixo:
+\begin{figure}[h!]
+\centering
+\includegraphics{flux_key2}
+\caption{Fluxograma KeyGraph}
+\label{flux_key}
+\end{figure}
+
+
+A identificação do docente com maior afinidade ao tema retratado no artigo é dado por meio da função de similaridade de cossenos, no qual o vetor com os TFIDF do texto-avaliado é comparado com o vetor de TFIDF do docente. Para finalizar, ordenam-se os resultados, e os docentes que apresentarem maiores similaridade, possuem a maior relação com o assunto abordado no texto-avaliado.
+
+
+
+Com o intuito de alcançar uma análise apurada, foram utilizados diferentes parâmetros entre as metodologias, seguem os cenários que foram realizados nos testes:
+
 
 \begin{itemize}
-\item TFIDF - todas as palavras do texto-avaliado;
-\item TFIDF - 15 palavras mais frequentes (TF) do texto-avaliado;
-\item TFIDF - 12 palavras mais frequentes (TF) do texto-avaliado;
-\item Keygraph - \(N_{HF} = 30\), \(N_{HK} = 12\) e \(N_{KW} = 12\);
-\item Keygraph - \(N_{HF} = 50\), \(N_{HK} = 15\) e \(N_{KW} = 15\).
+\item TFIDFG: TFIDF - todas as palavras do texto-avaliado;
+\item TFIDF15: TFIDF - 15 palavras mais frequentes (TF) do texto-avaliado;
+\item TFIDF12: TFIDF - 12 palavras mais frequentes (TF) do texto-avaliado;
+\item KeyGraph30: Keygraph - \(N_{HF} = 30\), \(N_{HK} = 12\) e \(N_{KW} = 12\);
+\item KeyGraph50: Keygraph - \(N_{HF} = 50\), \(N_{HK} = 15\) e \(N_{KW} = 15\).
 \end{itemize}
 
-Para mensurar a eficiência de cada metodologia, utilizou-se de um cálculo que se baseia na posição em que o docente, que de fato possui similaridade com o artigo, foi classificado. Por exemplo, sabe-se que os artigo retirados da conferência SBRT, possui maior similaridade com o docente Denis Fantinato, uma vez que sua área de atuação é a abordada na conferência. Dito isto, caso a metodologia classifique ele em primeiro neste artigos, será atribuído o valor 1, caso ele fique na quinta posição, é atribuído o valor 5. Esse processo é realizado para todos os artigos, e os docentes que se relacionam ao mesmo. No final essa nota é dividida pelo número de artigos, assim quanto mais próximo de 1 a metodologia ficar, mais assertiva ela performou. Seguem os resultados:
+Para mensurar a eficiência de cada metodologia, utilizou-se de um cálculo que se baseia na posição em que o docente, que de fato possui similaridade com o artigo, foi classificado. Por exemplo, sabe-se que os artigo retirados da conferência SBRT, possui maior similaridade com o Denis Fantinato, uma vez que sua área de atuação é amplamente abordada na conferência. Dito isto, caso a metodologia classifique ele em primeiro nestes artigos, será atribuído o valor 1, caso ele fique na quinta posição, é atribuído o valor 5. Esse processo é realizado para todos os artigos, e os docentes que se relacionam ao mesmo. No final, essa nota é dividida pelo número de artigos, assim quanto mais próximo de 1 a metodologia ficar, mais assertiva ela performou. Seguem os resultados:
 
 
 \begin{itemize}
-\item TFIDF - todas as palavras do texto-avaliado - nota 4;
-\item TFIDF - 15 palavras mais frequentes (TF) do texto-avaliado - nota 3,7;
-\item TFIDF - 12 palavras mais frequentes (TF) do texto-avaliado - nota 4,1;
-\item Keygraph - \(N_{HF} = 30\), \(N_{HK} = 12\) e \(N_{KW} = 12\) - nota 7;
-\item Keygraph - \(N_{HF} = 50\), \(N_{HK} = 15\) e \(N_{KW} = 15\) - nota 7.
+\item TFIDFG - nota 4;
+\item TFIDF15 - nota 3,7;
+\item TFIDF12 - nota 4,1;
+\item KeyGraph30 - nota 7;
+\item KeyGraph50 - nota 7.
 \end{itemize}
 
 
@@ -524,6 +535,16 @@ Os resultados serão apresentados também no modelo de mapas de calor, nos quais a
 \caption{Mapa de Calor - TFIDF com 15 termos mais frequentes }
 \label{tfidf}
 \end{figure}
+
+
+
+Tanto visualmente por meio dos mapas de calor, quanto pelos cálculos fica evidente a superioridade do TFIDF sobre o KeyGraph. Esse resultado era esperado visto que o TFIDF é uma uma medida estatística muito popular, devido a sua confiabilidade em identificar a importância de uma palavra dentre uma coleção. Já o KeyGraph possui outra abordagem, que evita a necessidade de uma coleção de documentos para apontar palavras-chave, além de não levar em conta nenhum cálculo de frequência do termo.
+
+Pelo fato do KeyGraph extrair um número pequeno de palavras-chave, a metodologia enfrenta dificuldades em identificar temas específicos. Na grande maioria dos textos, as palavras-chave extraídas eram de âmbito geral da grande área da Ciência da Computação, tais como "dados", "algoritmo" e "sistema", ou seja, termos que possuem sempre muita ocorrência nos textos referentes a área de tecnologia. Assim, a metodologia não consegue apontar o docente que possui a maior relação com o texto, uma vez as palavras-chave são constantes na maioria dos textos-avaliado e textos-base. Isso resulta  em similaridades parelhas, impossibilitando diferenciar docentes que possuem destaque em uma linha de pesquisa específica.
+
+Vale ressaltar que os dois cenários no qual o KeyGraph foi exposto, de uma maneira geral, não houve diferença de desempenho. Visto que, em um número de artigos sua performance foi superior com o KeyGraph30, como no Proj1 no qual o docente foi recomendado na primeira posição enquanto no KeyGraph50 o mesmo caiu para a quinta posição. Por outro lado, no Proj2 haviam dois docentes diretamente relacionados ao artigo, com os parâmetros do KeyGraph50 eles foram ranqueados em primeiro e terceiro, em contrapartida eles passaram para terceiro e quarto no KeyGraph30. Em suma, uma variação nos parâmetros utilizados na metodologia não impactaram no resultado, isso porque a nota geral do algoritmo se manteve a mesma.
+
+O mesmo vale para o TFIDF que apresentou leves variações com as mudanças nos parâmetros, porém mesmo nos cenários em que foram utilizados a mesma quantidade de termos do KeyGraph, TFIDF12 e TFIDF15, o desempenho se manteve constante e soberano quando comparado ao KeyGraph30 e KeyGraph50. Ressaltando a superioridade do TFIDF quando comparado a uma quantidade equivalente de termos, o que em teoria deveria representar a mesma adversidade enfrentado pelo KeyGraph em trabalhar com termos muito abrangentes, o TFIDF por meio de cálculos matemáticos ameniza drasticamente esta complicação.
 
 
 
