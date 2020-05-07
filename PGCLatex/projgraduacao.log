@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.19)  28 APR 2020 05:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.19)  7 MAY 2020 03:47
 entering extended mode
 **./projgraduacao.tex
 (projgraduacao.tex
@@ -1180,53 +1180,53 @@ LaTeX Warning: Label `tfidf' multiply defined.
 )
 \openout1 = `projgraduacao.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 57.
  ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 56.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 56.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 57.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 57.
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutm.fd
 "
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 56.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 56.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 57.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 57.
 
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmsfutm.fd
 "
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 56.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 56.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 57.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 57.
 
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmxfutm.fd
 "
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 56.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 57.
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
@@ -1297,7 +1297,7 @@ G,.JBIG2,.JB2,.eps]
 
 \AtBeginShipoutBox=\box43
 \c@lstlisting=\count187
-Package hyperref Info: Link coloring ON on input line 56.
+Package hyperref Info: Link coloring ON on input line 57.
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1311,10 +1311,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 56.
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
-LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \nameref on input line 57.
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
+LaTeX Info: Redefining \nameref on input line 57.
 (projgraduacao.out) (projgraduacao.out)
 \@outlinefile=\write4
 \openout4 = `projgraduacao.out'.
@@ -1393,9 +1393,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
 {C:/Users/mario/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]) [2]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 67.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 68.
 LaTeX Font Info:    Font shape `T1/futs/bx/sc' in size <24.88> not available
-(Font)              Font shape `T1/futs/b/sc' tried instead on input line 67.
+(Font)              Font shape `T1/futs/b/sc' tried instead on input line 68.
 
 [3
 
@@ -1419,38 +1419,38 @@ File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 
 ] [5]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 103.
+(Font)              scaled to size 6.99199pt on input line 104.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 103.
+(Font)              scaled to size 5.51999pt on input line 104.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 103.
+(Font)              scaled to size 6.99199pt on input line 104.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 103.
+(Font)              scaled to size 5.51999pt on input line 104.
  [6
 
 ] [7
 
 ] [8] [9]
-Overfull \hbox (0.20331pt too wide) in paragraph at lines 153--154
+Overfull \hbox (0.20331pt too wide) in paragraph at lines 154--155
 \T1/futs/m/n/12 in-ter-pre-ta-ção des-tes, pos-sam ser re-a-li-za-das de ma-nei
 ra mais rá-pida e efi-ci-ente [[][]Pas-sini 2012[][]].
  []
 
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 155.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 156.
 [10
 
 ]
 LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/it' tried instead on input line 167.
+(Font)              Font shape `T1/futs/b/it' tried instead on input line 168.
  [11] [12]
-Overfull \hbox (16.50415pt too wide) in paragraph at lines 227--227
+Overfull \hbox (16.50415pt too wide) in paragraph at lines 228--228
 |[][]\T1/futs/b/n/14.4 Frequência de Termo In-verso da Frequên-cia nos Do-cu-me
 n-tos - TFIDF[]| 
  []
 
 [13] [14]
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 297
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 298
 .
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\ts1futs.fd
@@ -1459,22 +1459,22 @@ File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 ) [15
 
 ]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 313.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 314.
 
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 314.
+(Font)              scaled to size 10.07397pt on input line 315.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 314.
+(Font)              scaled to size 7.63599pt on input line 315.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 314.
+(Font)              scaled to size 10.07397pt on input line 315.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 314.
+(Font)              scaled to size 7.63599pt on input line 315.
 
-Overfull \hbox (5.05135pt too wide) in paragraph at lines 325--326
+Overfull \hbox (5.05135pt too wide) in paragraph at lines 326--327
 \T1/futs/m/n/12 Inicialmente o texto é sub-me-tido ao pro-cesso de \T1/futs/m/i
 t/12 stem-ming \T1/futs/m/n/12 bem como a re-ti-rada de \T1/futs/m/it/12 stopwo
 rds\T1/futs/m/n/12 .
@@ -1484,10 +1484,10 @@ rds\T1/futs/m/n/12 .
 <Figuras/Grafo.png, id=343, 495.8525pt x 320.19624pt>
 File: Figuras/Grafo.png Graphic file (type png)
 <use Figuras/Grafo.png>
-Package pdftex.def Info: Figuras/Grafo.png  used on input line 335.
+Package pdftex.def Info: Figuras/Grafo.png  used on input line 336.
 (pdftex.def)             Requested size: 495.85129pt x 320.19545pt.
 
-Overfull \hbox (40.60718pt too wide) in paragraph at lines 335--336
+Overfull \hbox (40.60718pt too wide) in paragraph at lines 336--337
  [][] 
  []
 
@@ -1495,10 +1495,10 @@ Overfull \hbox (40.60718pt too wide) in paragraph at lines 335--336
 <Figuras/G_aresta.png, id=353, 485.815pt x 320.19624pt>
 File: Figuras/G_aresta.png Graphic file (type png)
 <use Figuras/G_aresta.png>
-Package pdftex.def Info: Figuras/G_aresta.png  used on input line 353.
+Package pdftex.def Info: Figuras/G_aresta.png  used on input line 354.
 (pdftex.def)             Requested size: 485.81381pt x 320.19545pt.
 
-Overfull \hbox (30.5697pt too wide) in paragraph at lines 353--354
+Overfull \hbox (30.5697pt too wide) in paragraph at lines 354--355
  [][] 
  []
 
@@ -1506,10 +1506,10 @@ Overfull \hbox (30.5697pt too wide) in paragraph at lines 353--354
 <Figuras/G_com_HK.png, id=361, 491.8375pt x 322.20375pt>
 File: Figuras/G_com_HK.png Graphic file (type png)
 <use Figuras/G_com_HK.png>
-Package pdftex.def Info: Figuras/G_com_HK.png  used on input line 392.
+Package pdftex.def Info: Figuras/G_com_HK.png  used on input line 393.
 (pdftex.def)             Requested size: 491.83629pt x 322.20296pt.
 
-Overfull \hbox (36.59218pt too wide) in paragraph at lines 392--393
+Overfull \hbox (36.59218pt too wide) in paragraph at lines 393--394
  [][] 
  []
 
@@ -1520,144 +1520,178 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figuras/G_final.png, id=372, 485.815pt x 320.19624pt>
 File: Figuras/G_final.png Graphic file (type png)
 <use Figuras/G_final.png>
-Package pdftex.def Info: Figuras/G_final.png  used on input line 410.
+Package pdftex.def Info: Figuras/G_final.png  used on input line 411.
 (pdftex.def)             Requested size: 485.81381pt x 320.19545pt.
 
-Overfull \hbox (30.5697pt too wide) in paragraph at lines 410--411
+Overfull \hbox (30.5697pt too wide) in paragraph at lines 411--412
  [][] 
  []
 
 [20 <./Figuras/G_com_HK.png>] [21 <./Figuras/G_final.png>] [22] [23
 
 ]
-Overfull \hbox (18.89803pt too wide) in paragraph at lines 435--436
-[]\T1/futs/m/n/12 "Avaliação de de-sem-pe-nho de wa-ve-let sh-rin-kage pela es-
-par-si-dade dos co-e-fi-ci-en-tes"(SBRT) 
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+[]|\T1/futs/m/n/12 Emilio Fran-ces-
  []
 
 
-Overfull \hbox (20.21797pt too wide) in paragraph at lines 441--442
-[]\T1/futs/m/n/12 "Um es-quema de apro-xi-ma-ção para um pro-blema de em-pa-co-
-ta-mento com ce-ná-rios"(ETC) 
+Underfull \hbox (badness 1629) in paragraph at lines 449--450
+\T1/futs/m/n/12 quini e Raphael
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+[]|\T1/futs/m/n/12 Emilio Fran-ces-
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 451--452
+\T1/futs/m/n/12 quini e Raphael
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+[]|\T1/futs/m/n/12 Cristiane Sato,
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 457--458
+\T1/futs/m/n/12 Gui-lherme Mota
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 457--458
+\T1/futs/m/n/12 e May-con Sam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+[]|\T1/futs/m/n/12 Cristiane Sato,
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 459--460
+\T1/futs/m/n/12 Gui-lherme Mota
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 459--460
+\T1/futs/m/n/12 e May-con Sam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+[]|\T1/futs/m/n/12 Cristiane Sato,
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 461--462
+\T1/futs/m/n/12 Gui-lherme Mota
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 461--462
+\T1/futs/m/n/12 e May-con Sam-
+ []
+
+
+Overfull \hbox (12.05284pt too wide) in paragraph at lines 437--464
+ [][] 
  []
 
 [24]
-<Figuras/fluxograma.jpg, id=400, 307.74976pt x 328.22626pt>
+<Figuras/fluxograma.jpg, id=402, 210.18526pt x 188.50426pt>
 File: Figuras/fluxograma.jpg Graphic file (type jpg)
 <use Figuras/fluxograma.jpg>
-Package pdftex.def Info: Figuras/fluxograma.jpg  used on input line 456.
-(pdftex.def)             Requested size: 307.749pt x 328.22545pt.
+Package pdftex.def Info: Figuras/fluxograma.jpg  used on input line 476.
+(pdftex.def)             Requested size: 210.18474pt x 188.50378pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/flux_key2.png, id=402, 311.9655pt x 399.894pt>
-File: Figuras/flux_key2.png Graphic file (type png)
-<use Figuras/flux_key2.png>
-Package pdftex.def Info: Figuras/flux_key2.png  used on input line 468.
-(pdftex.def)             Requested size: 311.96474pt x 399.893pt.
+<Figuras/flux_key.jpg, id=404, 210.18526pt x 211.38976pt>
+File: Figuras/flux_key.jpg Graphic file (type jpg)
+<use Figuras/flux_key.jpg>
+Package pdftex.def Info: Figuras/flux_key.jpg  used on input line 488.
+(pdftex.def)             Requested size: 210.18474pt x 211.38922pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25] [26 <./Figuras/fluxograma.jpg>]
-<Figuras/keygraph_30-12.jpg, id=414, 462.528pt x 160.80075pt>
-File: Figuras/keygraph_30-12.jpg Graphic file (type jpg)
-<use Figuras/keygraph_30-12.jpg>
-Package pdftex.def Info: Figuras/keygraph_30-12.jpg  used on input line 506.
-(pdftex.def)             Requested size: 462.52686pt x 160.80034pt.
-
-Overfull \hbox (7.28275pt too wide) in paragraph at lines 506--507
- [][] 
- []
+[25] [26 <./Figuras/fluxograma.jpg> <./Figuras/flux_key.jpg>]
+<Figuras/KEY30.png, id=417, 337.26pt x 252.945pt>
+File: Figuras/KEY30.png Graphic file (type png)
+<use Figuras/KEY30.png>
+Package pdftex.def Info: Figuras/KEY30.png  used on input line 542.
+(pdftex.def)             Requested size: 337.25917pt x 252.94438pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/keygraph_50-15.jpg, id=415, 464.33475pt x 159.59625pt>
-File: Figuras/keygraph_50-15.jpg Graphic file (type jpg)
-<use Figuras/keygraph_50-15.jpg>
-Package pdftex.def Info: Figuras/keygraph_50-15.jpg  used on input line 513.
-(pdftex.def)             Requested size: 464.3336pt x 159.59584pt.
-
-Overfull \hbox (9.0895pt too wide) in paragraph at lines 513--514
- [][] 
- []
-
+<Figuras/KEY50.png, id=418, 337.26pt x 252.945pt>
+File: Figuras/KEY50.png Graphic file (type png)
+<use Figuras/KEY50.png>
+Package pdftex.def Info: Figuras/KEY50.png  used on input line 549.
+(pdftex.def)             Requested size: 337.25917pt x 252.94438pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/TFIDF_GERAL.jpg, id=416, 463.7325pt x 158.994pt>
-File: Figuras/TFIDF_GERAL.jpg Graphic file (type jpg)
-<use Figuras/TFIDF_GERAL.jpg>
-Package pdftex.def Info: Figuras/TFIDF_GERAL.jpg  used on input line 520.
-(pdftex.def)             Requested size: 463.73135pt x 158.9936pt.
-
-Overfull \hbox (8.48724pt too wide) in paragraph at lines 520--521
- [][] 
- []
-
+<Figuras/TFGERAL.png, id=419, 337.26pt x 252.945pt>
+File: Figuras/TFGERAL.png Graphic file (type png)
+<use Figuras/TFGERAL.png>
+Package pdftex.def Info: Figuras/TFGERAL.png  used on input line 556.
+(pdftex.def)             Requested size: 337.25917pt x 252.94438pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/TFIDF_12.jpg, id=417, 462.528pt x 158.994pt>
-File: Figuras/TFIDF_12.jpg Graphic file (type jpg)
-<use Figuras/TFIDF_12.jpg>
-Package pdftex.def Info: Figuras/TFIDF_12.jpg  used on input line 527.
-(pdftex.def)             Requested size: 462.52686pt x 158.9936pt.
-
-Overfull \hbox (7.28275pt too wide) in paragraph at lines 527--528
- [][] 
- []
-
+<Figuras/TF12.png, id=420, 331.2375pt x 252.945pt>
+File: Figuras/TF12.png Graphic file (type png)
+<use Figuras/TF12.png>
+Package pdftex.def Info: Figuras/TF12.png  used on input line 563.
+(pdftex.def)             Requested size: 331.23668pt x 252.94438pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/TFIDF_15.jpg, id=418, 465.53925pt x 157.7895pt>
-File: Figuras/TFIDF_15.jpg Graphic file (type jpg)
-<use Figuras/TFIDF_15.jpg>
-Package pdftex.def Info: Figuras/TFIDF_15.jpg  used on input line 534.
-(pdftex.def)             Requested size: 465.5381pt x 157.78911pt.
-
-Overfull \hbox (10.29399pt too wide) in paragraph at lines 534--535
- [][] 
- []
-
+<Figuras/TF15.png, id=421, 331.2375pt x 252.945pt>
+File: Figuras/TF15.png Graphic file (type png)
+<use Figuras/TF15.png>
+Package pdftex.def Info: Figuras/TF15.png  used on input line 570.
+(pdftex.def)             Requested size: 331.23668pt x 252.94438pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27 <./Figuras/flux_key2.png>] [28 <./Figuras/keygraph_30-12.jpg> <./Figuras/ke
-ygraph_50-15.jpg> <./Figuras/TFIDF_GERAL.jpg>] [29 <./Figuras/TFIDF_12.jpg> <./
-Figuras/TFIDF_15.jpg>] [30] [31
+[27] [28 <./Figuras/KEY30.png> <./Figuras/KEY50.png>] [29 <./Figuras/TFGERAL.pn
+g> <./Figuras/TF12.png>] [30 <./Figuras/TF15.png>] [31] [32
 
-] [32] (projgraduacao.bbl
+] [33]
+(projgraduacao.bbl
 bibitemlist
-[33
+[34
 
-]) [34]
+]) [35]
 \tf@toc=\write5
 \openout5 = `projgraduacao.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 597.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 597.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 636.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 636.
  (projgraduacao.aux (introducao.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 597.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 597.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 636.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 636.
 Package rerunfilecheck Info: File `projgraduacao.out' has not changed.
 (rerunfilecheck)             Checksum: 8EC04C43350476CF3244275D1E480D1E;2524.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 597.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 636.
  ) 
 Here is how much of TeX's memory you used:
- 15134 strings out of 492946
- 215076 string characters out of 3126266
+ 15142 strings out of 492946
+ 215020 string characters out of 3126266
  540516 words of memory out of 3000000
- 18559 multiletter control sequences out of 15000+200000
+ 18564 multiletter control sequences out of 15000+200000
  152044 words of font info for 167 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,58p,1082b,1249s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,12n,58p,1208b,1249s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/mario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/mario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmssbx10.pfb><C:/Users/mario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
@@ -1670,9 +1704,9 @@ mario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:
 .pfb><C:/Users/mario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia
 /putr8a.pfb><C:/Users/mario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe
 /utopia/putri8a.pfb>
-Output written on projgraduacao.pdf (39 pages, 472842 bytes).
+Output written on projgraduacao.pdf (40 pages, 368978 bytes).
 PDF statistics:
- 520 PDF objects out of 1000 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
+ 533 PDF objects out of 1000 (max. 8388607)
+ 123 named destinations out of 1000 (max. 500000)
  344 words of extra memory for PDF output out of 10000 (max. 10000000)
 
