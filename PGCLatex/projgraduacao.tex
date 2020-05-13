@@ -24,6 +24,9 @@
 \DoubleSpacing
 \usepackage{verbatim}
 \usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 %----------------------------
 \usepackage{xcolor}
 \usepackage{graphicx}
@@ -67,7 +70,9 @@
 
 \chapter*{Resumo}
 
-Milhares de trabalhos científicos são desenvolvidos todos os anos em universidades públicas e privadas, entre eles: iniciações cientificas, trabalhos de conclusão de curso e teses de mestrado ou doutorado. O atual método para analisar tais trabalhos, é por meio de bancas avaliadoras, que na maioria das vezes é formada pelo orientador e dois (ou mais) docentes convidados pelo mesmo. Este projeto visa utilizar técnicas de mineração de textos aplicadas na classificação de trabalhos científicos, por meio da leituras de dados não estruturados presentes na Web, a partir dessa classificação, pretende-se identificar as palavras mais relevantes do trabalho. Com o intuito de, gerar uma banca coerente ao assunto abordado no artigo, através da indicação de docentes que atuam na área. 
+Milhares de trabalhos científicos são desenvolvidos todos os anos em universidades públicas e privadas, entre eles: iniciações científicas, trabalhos de conclusão de curso e teses de mestrado ou doutorado. O atual método para analisar tais trabalhos, é por meio de bancas avaliadoras, que na maioria das vezes é formada pelo orientador e dois (ou mais) docentes convidados pelo mesmo.
+Este projeto visa utilizar técnicas de mineração de textos aplicadas na classificação de trabalhos científicos, a partir dessa classificação, pretende-se identificar as palavras mais relevantes do trabalho.
+O objetivo final é gerar uma banca coerente ao assunto abordado em um artigo científico, por meio da indicação de docentes que atuam na área. 
 	
 
 
@@ -79,7 +84,9 @@ Milhares de trabalhos científicos são desenvolvidos todos os anos em universidad
 
 \thispagestyle{empty}
 \newpage
+\begin{KeepFromToc}
 \tableofcontents
+\end{KeepFromToc}
 
 \pagebreak
 \pagenumbering{arabic}
@@ -90,24 +97,31 @@ Milhares de trabalhos científicos são desenvolvidos todos os anos em universidad
 %\include{capanalisedasredesmario}
 \chapter{Justificativa}
 
-A ideia do projeto surgiu após a indagação de como seria possível aprimorar o método como bancas avaliadoras são formadas nas universidades, com o intuito de automatizar o processo e ao mesmo tempo, indicar docentes que de fato trabalhem na área abordada pelo trabalho. Isso porque, a função da banca não é apenas a de atribuir uma nota, mas também de propor melhorias para o desenvolvimento do trabalho. Essa contribuição é efetiva quando a mesa é composta por profissionais que dominem o tema do projeto.
+A ideia do projeto surgiu após a indagação de como seria possível aprimorar o método como bancas avaliadoras são formadas nas universidades, com o intuito de automatizar o processo e ao mesmo tempo, indicar docentes que de fato trabalhem na área abordada pelo trabalho. Isso porque, a função da banca não é apenas a de atribuir uma nota, mas também de propor melhorias para o desenvolvimento do trabalho. Essa contribuição é efetiva quando a banca é composta por profissionais que dominem o tema do projeto.
 
-Em regra o procedimento de composição de uma banca avaliadora é invariavelmente o mesmo: o orientador do trabalho é responsável por convidar docentes a sua escolha para compor a mesa avaliadora. Porém não é necessário que estes docentes possuam expertise na área de pesquisa apresentada no trabalho, nestes casos, a banca não possuirá uma colaboração positiva para o projeto, já que a análise será superficial, devido a falta de familiaridade com o assunto. Além disso, o processo é burocrático e o orientador por vezes não conhece	as áreas de pesquisas em que outros pesquisadores da universidade estão trabalhando atualmente. Por tal razão, é possível que a escolha de membros da banca se torne por afinidade do que por experiência no assunto.
+Em regra o procedimento de composição de uma banca avaliadora é invariavelmente o mesmo: o orientador do trabalho é responsável por convidar docentes a sua escolha para compor a banca avaliadora.
+Porém não é necessário que estes docentes possuam expertise na área de pesquisa apresentada no trabalho, nestes casos, a banca poderá falhar em ter uma colaboração positiva para o projeto, já que a análise possivelmente será superficial, devido a falta de familiaridade com o assunto.
+Além disso, o processo é burocrático, podendo demandar tempo considerável, e o orientador por vezes não conhece as áreas de pesquisas em que outros pesquisadores da universidade estão trabalhando atualmente.
+Por tal razão, é possível que a escolha de membros da banca se torne mais por afinidade do que por experiência no assunto.
 
-Com a aplicação de técnicas de mineração de textos, é possível identificar os docentes mais apropriados para qualificar o trabalho em questão de baseada em dados, evitando assim, a seleção daqueles que não possuem proximidade ao tema abordado. Somado a isso, o processo seria automatizado, retirando a função do orientador de selecionar os docentes da mesa, impossibilitando que a decisão seja influenciada por critérios não técnicos.
+Com a aplicação de técnicas de mineração de textos, é possível identificar os docentes mais apropriados para qualificar o trabalho em questão baseando-se em dados.
+Dessa forma, evita-se a seleção daqueles que não possuem proximidade ao tema abordado. Somado a isso, o processo seria automatizado, retirando a função do orientador de selecionar os docentes da banca, impossibilitando que a decisão seja influenciada por critérios não técnicos.
 
 
 
 
 \chapter{Objetivos}\label{ch:obj}
 
-Será desenvolvido um processo no qual, técnicas de mineração de textos serão aplicadas, afim de identificar os docentes que possuem maior afinidade com a área de pesquisa do trabalho sujeito a avaliação. Para tanto, serão utilizados o Currículo \textit{Lattes}\footnote{A Plataforma Lattes é uma plataforma virtual criada e mantida pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), pela qual integra as bases de dados de currículos, grupos de pesquisa e instituições, em um único sistema de informações, das áreas de Ciência e Tecnologia, atuando no Brasil.} dos docentes, com o intuito de identificar suas principais áreas de pesquisas.
+%T: faltou você atualizar este capítulo!
+Será desenvolvido um processo no qual técnicas de mineração de textos serão aplicadas, afim de identificar os docentes que possuem maior afinidade com a área de pesquisa do trabalho sujeito a avaliação. Para tanto, serão utilizados o Currículo \textit{Lattes}\footnote{A Plataforma Lattes é uma plataforma virtual criada e mantida pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), pela qual integra as bases de dados de currículos, grupos de pesquisa e instituições, em um único sistema de informações, das áreas de Ciência e Tecnologia, atuando no Brasil.} dos docentes, com o intuito de identificar suas principais áreas de pesquisas.
 
 Como objetivo secundário, visa-se realizar um agrupamento de docentes baseado em suas áreas de pesquisas. A ideia é semelhante ao objetivo principal, porém ao invés da leitura de um trabalho, serão analisados os currículos dos docentes e assim associar aqueles possuem maiores semelhanças. Os grupos serão de extrema utilidade, pois atualmente nos sites da UFABC as informações sobre os docentes e suas respectivas áreas de atuações, em sua maioria estão incorretas e/ou desatualizadas. Devido a isso, os discentes acabam enfrentando diversas dificuldades entre elas, a escolha de um professor orientador que atue na área de pesquisa do projeto ou identificar um docente apto a sanar dúvidas referentes a uma determinada área. 
 
 
 
 \chapter{Metodologia}\label{cap:met}
+%T: faltou você atualizar este capítulo!
+
 Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, serão acessados os currículos \textit{Lattes} dos docentes, identificando as palavras presentes em sua formação acadêmica, área de atuação, projetos de pesquisa, prêmios recebidos, produções realizadas, bancas e orientações. As palavras encontradas na \textit{Plataforma Lattes} serão comparadas com as do trabalho, identificando aquelas que são semelhantes. Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
 
 Sabendo que o processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas secções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}
@@ -311,15 +325,22 @@ Houve também a definição de alguns parâmetros:
 
 Para um melhor entendimento do passo a passo da metodologia, um pseudocódigo foi desenvolvido:
 
-\begin{lstlisting}
- Normalizar Texto
- Criar Grafo
- Adicionar Arestas
- Calcular Keys
- Calcular Columns
- Extrair Keywords
- \end{lstlisting}
-
+\algrenewcommand\algorithmicfunction{\textbf{Função}}
+\algrenewcommand\algorithmicend{\textbf{Fim}}
+\floatname{algorithm}{Algoritmo}
+\begin{algorithm}
+    \caption{Keygraph: principais passos}
+    \begin{algorithmic}[1]
+        \Function{Keygraph}{Texto, $N_{HF}. N_{HK}, N_{KW}$}
+        \State Normalizar texto
+        \State Criar grafo com $N_{HF}$ vértices para termos de alta frequência
+        \State Adicionar arestas
+        \State Calcular \textit{keys} identificando $N_{HK}$ termos importantes
+        \State Calcular \textit{columns}
+        \State Extrair $N_{KW}$ palavras-chave
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
 
 \section{Normalizar Texto}
 
@@ -434,31 +455,43 @@ Foi realizado a seleção de 10 artigos que discutissem diferentes áreas de pesqui
 \label{tab:artigo}
 \centering
 \caption{Artigos}
-\begin{tabular}{|c|p{9cm}|c|p{3cm}|}
+\begin{tabular}{|c|p{8cm}|c|p{4cm}|}
 
 \hline 
 \textbf{ID} & \textbf{Artigo} & \textbf{Conferência} & \textbf{Docentes} \\ % Note a separação de col. e a quebra de linhas
 \hline
 \hline                            
-1 & "Sistema de medição e análise de qualidade de redes celulares móveis" & SBRT & Denis Fantinato\\
+1 & Sistema de medição e análise de qualidade de redes celulares móveis & SBRT & Denis Fantinato\\
 \hline 
-2 & "Um método para disciminação entre PSK e FSK uitlizando estatísticas de ordem superior" & SBRT& Denis Fantinato \\
+2 & Um método para disciminação entre PSK e FSK uitlizando estatísticas de ordem superior & SBRT& Denis Fantinato \\
 \hline 
-3 & "Avaliação de desempenho de wavelet shrinkage pela esparsidade dos coeficientes"  & SBRT & Denis Fantinato \\
+3 & Avaliação de desempenho de wavelet shrinkage pela esparsidade dos coeficientes  & SBRT & Denis Fantinato \\
 \hline 
-4 & "Análise de Desempenho da Execução Remota de Método Aplicado ao Monitoramento de Animais com VANT" & ERAD & Emilio Francesquini e Raphael Camargo \\
+\multirow{3}{*}{4} & \multirow{3}{=}{Análise de Desempenho da Execução Remota de Método Aplicado ao Monitoramento de Animais com VANT} & \multirow{3}{*}{ERAD} & Emilio Francesquini  \\
+  & & & Raphael Camargo\\
+  & & & \\
 \hline 
-5 & "Primitivas para aplicação de Transactional Boosting no STM Haskell"  & ERAD & Emilio Francesquini e Raphael Camargo\\      
+\multirow{2}{*}{5} & \multirow{2}{=}{Primitivas para aplicação de Transactional Boosting no STM Haskell}  & \multirow{2}{*}{ERAD} & Emilio Francesquini \\
+                   & & &   Raphael Camargo\\      
 \hline 
-6 & "Parametrização hierárquica de superfícies poligonais construídas com triangulação de Delaunay restrita"  & SIBGRAPI & Harlen Bargatelo e João Gois\\      
+\multirow{3}{*}{6} & \multirow{3}{=}{Parametrização hierárquica de superfícies poligonais construídas com triangulação de Delaunay restrita}  &\multirow{3}{*}{SIBGRAPI} & Harlen Bargatelo \\
+                   & & & João Gois\\      
+                   & & & \\
 \hline 
-7 & "Detecção de Desfolha de Soja Utilizando Redes Neurais Convolucionais"  & SIBGRAPI &Harlen Bargatelo e João Gois\\      
+\multirow{2}{*}{7} & \multirow{2}{=}{Detecção de Desfolha de Soja Utilizando Redes Neurais Convolucionais}  & \multirow{2}{*}{SIBGRAPI} &Harlen Bargatelo \\
+                   & & & João Gois\\      
 \hline 
-8 &  "Aspectos de complexidade parametrizada e problemas análogos em problemas de lista coloração de grafos e suas variações"  & ETC & Cristiane Sato,  Guilherme Mota e  Maycon Sambinelli \\      
+\multirow{3}{*}{8} & \multirow{3}{=}{Aspectos de complexidade parametrizada e problemas análogos em problemas de lista coloração de grafos e suas variações}  & \multirow{3}{*}{ETC} & Cristiane Sato \\
+                   & & & Guilherme Mota \\
+                   & & & Maycon Sambinelli \\      
 \hline 
-9 & "Um esquema de aproximação para um problema de empacotamento com cenários"  & ETC & Cristiane Sato,  Guilherme Mota e  Maycon Sambinelli\\      
+\multirow{3}{*}{9} & \multirow{3}{=}{Um esquema de aproximação para um problema de empacotamento com cenários}  & \multirow{3}{*}{ETC} & Cristiane Sato \\
+                   & & & Guilherme Mota \\
+                   & & & Maycon Sambinelli\\      
 \hline 
-10 & "Reconhecimento de Grafos Dino de Precedência"  & ETC &Cristiane Sato,  Guilherme Mota e  Maycon Sambinelli\\      
+\multirow{3}{*}{10} & \multirow{3}{=}{Reconhecimento de Grafos Dino de Precedência}  & \multirow{3}{*}{ETC} &Cristiane Sato \\
+                    &&& Guilherme Mota \\
+                    &&& Maycon Sambinelli\\      
 \hline 
 \end{tabular}
 \end{table}
