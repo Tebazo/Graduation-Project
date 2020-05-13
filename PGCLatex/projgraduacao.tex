@@ -1,13 +1,4 @@
 
- %=================================================
-%Modelo de monografia
-%Autor: Andre Filipe M. Batista
-%todos os direitos reservados.
-% GPL -> Use, mas nao deixe de citar :-)
-%=================================================
-
-
-
 \documentclass[a4paper, 12pt, oneside, brazil]{memoir}
 
 
@@ -110,50 +101,41 @@ Dessa forma, evita-se a seleção daqueles que não possuem proximidade ao tema abo
 
 
 
+
 \chapter{Objetivos}\label{ch:obj}
 
-%T: faltou você atualizar este capítulo!
-Será desenvolvido um processo no qual técnicas de mineração de textos serão aplicadas, afim de identificar os docentes que possuem maior afinidade com a área de pesquisa do trabalho sujeito a avaliação. Para tanto, serão utilizados o Currículo \textit{Lattes}\footnote{A Plataforma Lattes é uma plataforma virtual criada e mantida pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), pela qual integra as bases de dados de currículos, grupos de pesquisa e instituições, em um único sistema de informações, das áreas de Ciência e Tecnologia, atuando no Brasil.} dos docentes, com o intuito de identificar suas principais áreas de pesquisas.
+Será desenvolvido um processo no qual, técnicas de mineração de textos serão aplicadas, afim de identificar os docentes que possuem maior afinidade com a área de pesquisa do trabalho sujeito a avaliação. Para tanto, serão utilizados as dissertações de mestrado dos mesmos, com o intuito de identificar suas principais áreas de pesquisas.
 
-Como objetivo secundário, visa-se realizar um agrupamento de docentes baseado em suas áreas de pesquisas. A ideia é semelhante ao objetivo principal, porém ao invés da leitura de um trabalho, serão analisados os currículos dos docentes e assim associar aqueles possuem maiores semelhanças. Os grupos serão de extrema utilidade, pois atualmente nos sites da UFABC as informações sobre os docentes e suas respectivas áreas de atuações, em sua maioria estão incorretas e/ou desatualizadas. Devido a isso, os discentes acabam enfrentando diversas dificuldades entre elas, a escolha de um professor orientador que atue na área de pesquisa do projeto ou identificar um docente apto a sanar dúvidas referentes a uma determinada área. 
+Como objetivo secundário, visa-se realizar um agrupamento de docentes baseado em suas áreas de pesquisas. A ideia é semelhante ao objetivo principal, porém ao invés da leitura de um trabalho, serão analisados as dissertações dos docentes e assim associar aqueles possuem maiores semelhanças. Os grupos serão de extrema utilidade, pois atualmente nos sites da UFABC as informações sobre os docentes e suas respectivas áreas de atuações, em sua maioria estão incorretas e/ou desatualizadas. Devido a isso, os discentes acabam enfrentando diversas dificuldades entre elas, a escolha de um professor orientador que atue na área de pesquisa do projeto ou identificar um docente apto a sanar dúvidas referentes a uma determinada área. 
 
 
 
 \chapter{Metodologia}\label{cap:met}
-%T: faltou você atualizar este capítulo!
+Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, será feito a leitura do texto das dissertações, e dentre elas, é identificando aquelas que são semelhantes ás do  trabalho científico. Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
 
-Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, serão acessados os currículos \textit{Lattes} dos docentes, identificando as palavras presentes em sua formação acadêmica, área de atuação, projetos de pesquisa, prêmios recebidos, produções realizadas, bancas e orientações. As palavras encontradas na \textit{Plataforma Lattes} serão comparadas com as do trabalho, identificando aquelas que são semelhantes. Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
 
 Sabendo que o processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas secções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}
 
 \section{Identificação do Problema}
 
-Utilizar técnicas de mineração de textos na recomendação dos docentes mais apropriados para comporem a banca avaliadora de um determinado trabalho. Para isso, serão utilizado as informações presentes na \textit{Plataforma Lattes} dos docentes, tais como seus projetos de pesquisas, orientações, trabalhos realizados, entre outras.
+Utilizar técnicas de mineração de textos na recomendação dos docentes mais apropriados para comporem a banca avaliadora de um determinado trabalho. Para isso, serão utilizado as informações presentes nas dissertações de mestrado dos docentes.
 
 \section{Pré-Processamento}
 
-O desafio inicial é verificar que parte da \textit{Plataforma Lattes} contém os dados que deverão ser analisadas pelo processo. Posteriormente, identificar um método ou ferramenta que realize a leitura desse conteúdo e disponibilize para uso.
+O desafio inicial é identificar um método ou ferramenta que realize a leitura dos textos presente nas dissertações e os disponibilize para uso.
 
-Para que o processo realizar as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para "limpar" o texto, tais como \textit{stopwords} e \textit{stemming}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
- 
-
+Para que o processo realize as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para "limpar" o texto, tais como \textit{stopwords} e \textit{stemming}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
 
 
 \section{Extração de Padrões}\label{sec:ext}
 
 Aqui deverá ser aplicado uma técnica ou modelo matemático para identificar entre as palavras armazenadas, aquelas que serão \textit{key words}  (palavras chave) e assim, serem utilizadas nesta etapa.
-Para cada palavra chave do texto de entrada, será realizada uma comparação entre as palavras chave retiradas da \textit{Plataforma Lattes} dos docentes. Isso posto, os docentes que obtiverem um maior número de correlação, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para preencherem a banca. Visando o objetivo secundário, o processo será similar, porém as palavras chave comparadas serão somente aquelas identificadas na \textit{Plataforma Lattes}, e o objetivo da correlação será o agrupamento daqueles que atuam na mesma área.
+Para cada palavra chave do texto de entrada, será realizada uma comparação entre as palavras chave retiradas das dissertações dos docentes. Isso posto, os docentes que obtiverem um maior número de correlação, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para preencherem a banca. Visando o objetivo secundário, o processo será similar, porém as palavras chave comparadas serão somente aquelas identificadas nas dissertações, e o objetivo da correlação será o agrupamento daqueles que atuam na mesma área.
 
 
 \section{Pós Processamento}
 
-Tendo em vista a informação extraída, a formação de bancas coerentes com o tema abordado será realizada de maneira simples, pois bastará selecionar os docentes que foram identificados com maior familiaridade ao assunto. Além disso, as informações dos docentes são coletadas de uma página \textit{web}, elas estarão atualizadas de acordo com as publicações e participações em pesquisas de cada um.
-
-
-
-
-
-
+Tendo em vista a informação extraída, a formação de bancas coerentes com o tema abordado será realizada de maneira simples, pois bastará selecionar os docentes que foram identificados com maior familiaridade ao assunto. 
 
 
 
