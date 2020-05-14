@@ -1,9 +1,65 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: projgraduacao.aux
+This is BibTeX, Version 0.99d (TeX Live 2019/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: projgraduacao.aux
 A level-1 auxiliary file: introducao.aux
 The style file: abnt-alf.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: bibliografia.bib
+Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
 | Estilo bibliográfico abnt-alf.bst versão 1.45           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
+You've used 16 entries,
+            6476 wiz_defined-function locations,
+            1244 strings with 12059 characters,
+and the built_in function-call counts, 13253 in all, are:
+= -- 1177
+> -- 475
+< -- 15
++ -- 239
+- -- 145
+* -- 923
+:= -- 1825
+add.period$ -- 59
+call.type$ -- 16
+change.case$ -- 166
+chr.to.int$ -- 28
+cite$ -- 16
+duplicate$ -- 585
+empty$ -- 945
+format.name$ -- 677
+if$ -- 3157
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 280
+newline$ -- 85
+num.names$ -- 75
+pop$ -- 403
+preamble$ -- 1
+purify$ -- 62
+quote$ -- 0
+skip$ -- 784
+stack$ -- 1
+substring$ -- 468
+swap$ -- 260
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 15
+warning$ -- 0
+while$ -- 110
+width$ -- 0
+write$ -- 250
