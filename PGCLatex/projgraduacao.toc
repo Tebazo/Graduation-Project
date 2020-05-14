@@ -2,9 +2,9 @@
 \contentsline {chapter}{\chapternumberline {1}Introdu\c c\~ao}{1}{chapter.1}% 
 \contentsline {chapter}{\chapternumberline {2}Justificativa}{4}{chapter.2}% 
 \contentsline {chapter}{\chapternumberline {3}Objetivos}{6}{chapter.3}% 
-\contentsline {chapter}{\chapternumberline {4}Metodologia}{7}{chapter.4}% 
+\contentsline {chapter}{\chapternumberline {4}Minera\c c\~ao de Textos}{7}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Identifica\c c\~ao do Problema}{7}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Pr\'e-Processamento}{8}{section.4.2}% 
+\contentsline {section}{\numberline {4.2}Pr\'e-Processamento}{7}{section.4.2}% 
 \contentsline {section}{\numberline {4.3}Extra\c c\~ao de Padr\~oes}{8}{section.4.3}% 
 \contentsline {section}{\numberline {4.4}P\'os Processamento}{8}{section.4.4}% 
 \contentsline {chapter}{\chapternumberline {5}Fundamenta\c c\~ao Te\'orica}{9}{chapter.5}% 
@@ -26,11 +26,11 @@
 \contentsline {section}{\numberline {6.2}Criar Grafo}{15}{section.6.2}% 
 \contentsline {section}{\numberline {6.3}Adicionar Arestas}{16}{section.6.3}% 
 \contentsline {section}{\numberline {6.4}Calcular Keys}{17}{section.6.4}% 
-\contentsline {section}{\numberline {6.5}Calcular Columns}{19}{section.6.5}% 
-\contentsline {section}{\numberline {6.6}Extrair Keywords}{20}{section.6.6}% 
+\contentsline {section}{\numberline {6.5}Calcular Columns}{18}{section.6.5}% 
+\contentsline {section}{\numberline {6.6}Extrair Keywords}{19}{section.6.6}% 
 \contentsline {section}{\numberline {6.7}Considera\c c\~oes Finais}{20}{section.6.7}% 
-\contentsline {chapter}{\chapternumberline {7}An\'alise de Resultados}{22}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Considera\c c\~oes Iniciais}{22}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}Metodologia}{24}{section.7.2}% 
-\contentsline {chapter}{\chapternumberline {8}Conclus\~ao e Trabalhos Futuros}{31}{chapter.8}% 
-\contentsline {chapter}{\chapternumberline {R}Refer\^encias}{33}{chapter.9}% 
+\contentsline {chapter}{\chapternumberline {7}An\'alise de Resultados}{21}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Considera\c c\~oes Iniciais}{21}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Metodologia}{23}{section.7.2}% 
+\contentsline {chapter}{\chapternumberline {8}Conclus\~ao e Trabalhos Futuros}{30}{chapter.8}% 
+\contentsline {chapter}{\chapternumberline {R}Refer\^encias}{32}{chapter.9}% 

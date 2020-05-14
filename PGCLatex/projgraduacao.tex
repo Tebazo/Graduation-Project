@@ -88,7 +88,7 @@ O objetivo final é gerar uma banca coerente ao assunto abordado em um artigo cie
 %\include{capanalisedasredesmario}
 \chapter{Justificativa}
 
-A ideia do projeto surgiu após a indagação de como seria possível aprimorar o método como bancas avaliadoras são formadas nas universidades, com o intuito de automatizar o processo e ao mesmo tempo, indicar docentes que de fato trabalhem na área abordada pelo trabalho. Isso porque, a função da banca não é apenas a de atribuir uma nota, mas também de propor melhorias para o desenvolvimento do trabalho. Essa contribuição é efetiva quando a banca é composta por profissionais que dominem o tema do projeto.
+A ideia do projeto surgiu após a indagação de como seria possível aprimorar o método de como bancas avaliadoras são formadas nas universidades, com o intuito de automatizar o processo e ao mesmo tempo, indicar docentes que de fato trabalhem na área abordada pelo trabalho. Isso porque, a função da banca não é apenas a de atribuir uma nota, mas também de propor melhorias para o desenvolvimento do trabalho. Essa contribuição é efetiva quando a banca é composta por profissionais que dominem o tema do projeto.
 
 Em regra o procedimento de composição de uma banca avaliadora é invariavelmente o mesmo: o orientador do trabalho é responsável por convidar docentes a sua escolha para compor a banca avaliadora.
 Porém não é necessário que estes docentes possuam expertise na área de pesquisa apresentada no trabalho, nestes casos, a banca poderá falhar em ter uma colaboração positiva para o projeto, já que a análise possivelmente será superficial, devido a falta de familiaridade com o assunto.
@@ -104,17 +104,21 @@ Dessa forma, evita-se a seleção daqueles que não possuem proximidade ao tema abo
 
 \chapter{Objetivos}\label{ch:obj}
 
-Será desenvolvido um processo no qual, técnicas de mineração de textos serão aplicadas, afim de identificar os docentes que possuem maior afinidade com a área de pesquisa do trabalho sujeito a avaliação. Para tanto, serão utilizados as dissertações de mestrado dos mesmos, com o intuito de identificar suas principais áreas de pesquisas.
+O principal objetivo deste trabalho é desenvolver um processo no qual, por meio de técnicas de mineração de textos, identifica-se os docentes que possuem maior afinidade com a área de pesquisa de um trabalho sujeito a avaliação.
+Para tanto, utiliza-se as dissertações de mestrado dos docentes, com o intuito de identificar suas principais áreas de pesquisas.
 
+%T: De onde saiu esse grupo? Não fizemos nada disso! Substituir este texto por objetivo específico falando da extração de palavras-chave e de comparar a abordagem do keygraph
 Como objetivo secundário, visa-se realizar um agrupamento de docentes baseado em suas áreas de pesquisas. A ideia é semelhante ao objetivo principal, porém ao invés da leitura de um trabalho, serão analisados as dissertações dos docentes e assim associar aqueles possuem maiores semelhanças. Os grupos serão de extrema utilidade, pois atualmente nos sites da UFABC as informações sobre os docentes e suas respectivas áreas de atuações, em sua maioria estão incorretas e/ou desatualizadas. Devido a isso, os discentes acabam enfrentando diversas dificuldades entre elas, a escolha de um professor orientador que atue na área de pesquisa do projeto ou identificar um docente apto a sanar dúvidas referentes a uma determinada área. 
 
 
 
-\chapter{Metodologia}\label{cap:met}
-Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, será feito a leitura do texto das dissertações, e dentre elas, é identificando aquelas que são semelhantes ás do  trabalho científico. Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
+\chapter{Mineração de Textos}\label{cap:met}
+
+%Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, será feita a leitura do texto das dissertações, com o objetivo de identificar entre elas quais envolvem temas semelhantes ao trabalho científico.
+%Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
 
 
-Sabendo que o processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas secções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}
+Sabendo que o processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas seções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}.
 
 \section{Identificação do Problema}
 
@@ -124,13 +128,16 @@ Utilizar técnicas de mineração de textos na recomendação dos docentes mais aprop
 
 O desafio inicial é identificar um método ou ferramenta que realize a leitura dos textos presente nas dissertações e os disponibilize para uso.
 
-Para que o processo realize as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para "limpar" o texto, tais como \textit{stopwords} e \textit{stemming}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
+Para que o processo realize as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para \textit{limpar} o texto, tais como \textit{stopwords} e \textit{stemming} \cite{SLP00}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
 
 
 \section{Extração de Padrões}\label{sec:ext}
 
-Aqui deverá ser aplicado uma técnica ou modelo matemático para identificar entre as palavras armazenadas, aquelas que serão \textit{key words}  (palavras chave) e assim, serem utilizadas nesta etapa.
-Para cada palavra chave do texto de entrada, será realizada uma comparação entre as palavras chave retiradas das dissertações dos docentes. Isso posto, os docentes que obtiverem um maior número de correlação, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para preencherem a banca. Visando o objetivo secundário, o processo será similar, porém as palavras chave comparadas serão somente aquelas identificadas nas dissertações, e o objetivo da correlação será o agrupamento daqueles que atuam na mesma área.
+Para identificar palavras-chave (\textit{key words}) são utilizados critérios estatísticos ou modelos matemáticos.
+Para cada palavra-chave do texto de entrada, será realizada uma comparação entre as palavras-chave retiradas das dissertações dos docentes.
+Os docentes que obtiverem maior frequência de tais palavras ou que tenham alguma identificação de correlação com tais palavras, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para comporem a banca.
+%T: Não sei do que tu tá falando aqui
+Visando o objetivo secundário, o processo será similar, porém as palavras chave comparadas serão somente aquelas identificadas nas dissertações, e o objetivo da correlação será o agrupamento daqueles que atuam na mesma área.
 
 
 \section{Pós Processamento}
@@ -143,7 +150,8 @@ Tendo em vista a informação extraída, a formação de bancas coerentes com o tema 
 
 \chapter{Fundamentação Teórica}
 
-Neste Capítulo serão discutidos conceitos e técnicas referentes a Mineração de Textos (MT). As etapas da MT apresentadas no Capítulo \ref{cap:met} serão utilizadas para identificar em qual momento do processo cada técnica é aplicada.
+Neste Capítulo são apresentados em mais detalhes conceitos e técnicas comumentes usadas em Mineração de Textos (MT).
+As etapas da MT apresentadas no Capítulo \ref{cap:met} são utilizadas para identificar em qual momento do processo cada técnica é aplicada.
 
 \section{Pré-Processamento}
 
@@ -157,7 +165,7 @@ Neste Capítulo serão discutidos conceitos e técnicas referentes a Mineração de T
 
 \subsubsection{Identificação de Termos Compostos}
 
-Há diversos termos que possuem diferentes significados quando descritos por meio da utilização de duas ou mais palavras adjacentes, são conhecidos como \textit{Word-phrase formation}, podemos citar como exemplo o termo "Inteligência Artificial". Uma maneira de reconhecer estas palavras, consiste em identificar os termos que co-ocorrem com a maior frequência no documento, e posteriormente validar ou não as expressões \cite{ana2007}.  
+Há diversos termos que possuem diferentes significados quando descritos por meio da utilização de duas ou mais palavras adjacentes, são conhecidos como \textit{Word-phrase formation}, podemos citar como exemplo o termo ``Inteligência Artificial''. Uma maneira de reconhecer estas palavras, consiste em identificar os termos que co-ocorrem com a maior frequência no documento, e posteriormente validar ou não as expressões \cite{ana2007}.  
  
  
  
@@ -166,7 +174,8 @@ Há diversos termos que possuem diferentes significados quando descritos por meio
 
 No processo de análise de textos, é necessário identificar palavras que não demonstram relevância, possibilitando assim a sua remoção. Pode-se citar como exemplo os artigos, preposições, pronomes, advérbios e outras classes de palavras auxiliares. Estes termos formam a maior parte dos textos da língua portuguesa, não agregando valor ao entendimento do texto analisado \cite{maria2012}.
 
-As \textit{stopwords} formam um "dicionário negativo", também conhecido como \textit{stoplist}. Assim, ao realizar a análise de um texto, as palavras   encontradas no dicionário são identificadas como \textit{stopwords}, resultando na remoção dos termos \cite{ana2007}.
+As \textit{stopwords} formam um ``dicionário negativo'', também conhecido como \textit{stoplist}.
+Assim, ao realizar a análise de um texto, as palavras encontradas no dicionário são identificadas como \textit{stopwords}, resultando na remoção dos termos \cite{ana2007}.
 
 
 \subsection{\textit{Stemming}}
@@ -176,7 +185,8 @@ As \textit{stopwords} formam um "dicionário negativo", também conhecido como \te
 
 Dois erros típicos que costumam ocorrer durante o processo de \textit{stemming} são \textit{overstemming} e \textit{understemming}. \textit{Overstemming} ocorre quando não só o sufixo, mas também parte do radical é retirado da palavra. Já \textit{understemming} ocorre quando o sufixo não é removido, ou é apenas removido parcialmente \cite{uber2004}.  
 
-Há diversos algoritmos de \textit{Stemming} desenvolvidos, porém eles devem ser projetados para o processamento de um idioma em específico. Como neste projeto serão analisados textos na língua portuguesa, destacam-se três algoritmos: a versão para português do algoritmo de PORTER \cite{PORTER2005}, o Removedor de Sufixo da língua Portuguesa (RSLP), proposto por Orengo e Huyck \cite{orengo2001stemming} e o algoritmo STEMBR, proposto por Alvares \cite{alvares2005stembr} \cite{maria2012}.
+Há diversos algoritmos de \textit{Stemming} desenvolvidos, porém eles devem ser projetados para o processamento de um idioma em específico.
+Como neste projeto são analisados textos na língua portuguesa, destacam-se três algoritmos: a versão para português do algoritmo de PORTER \cite{PORTER2005}, o Removedor de Sufixo da língua Portuguesa (RSLP), proposto por Orengo e Huyck \cite{orengo2001stemming} e o algoritmo STEMBR, proposto por Alvares \cite{alvares2005stembr} \cite{maria2012}.
 
 Foram realizados estudos para identificar a técnica mais eficiente, comparando o desempenho dos três algoritmos citados anteriormente. O RSLP foi considerado o mais eficiente devido a menor taxa de erros de \textit{overstemming} e \textit{understemming} \cite{orengo2001stemming}.
 
@@ -189,7 +199,7 @@ Essa é a principal etapa do processo de Mineração de Textos, nela ocorre a busca
 
 As palavras mais frequentes em um texto (com exceção das \textit{stopwords}) geralmente possuem um maior significado para o entendimento do assunto abordado no documento. Há duas maneiras de calcular a relevância destas palavras, a primeira delas é por meio da frequência que ela aparece no texto ou por meio da sua posição sintática. 
 
-Neste projeto será utilizado a análise baseada na frequência, mediante a atribuição de um \textit{peso} para cada palavra. Há diversas maneiras de realizar o cálculo deste peso, a seguir serão descritos três métodos: frequência absoluta, frequência relativa e frequência inversa de documentos \cite{ana2007}.
+Neste projeto é utilizada a análise baseada na frequência, mediante a atribuição de um \textit{peso} para cada palavra. Há diversas maneiras de realizar o cálculo deste peso, a seguir são descritos três métodos: frequência absoluta, frequência relativa e frequência inversa de documentos \cite{ana2007}.
 
 \subsubsection{Frequência Absoluta}
 
@@ -202,23 +212,24 @@ Neste projeto será utilizado a análise baseada na frequência, mediante a atribui
 Segundo Santos \cite{wives1999estudo} esta é a técnica mais comum para a identificação do quanto uma determinada palavra é importante para um documento, de acordo com o número de ocorrências desta palavra no mesmo. Segue a fórmula da frequência relativa:
 
 \begin{equation}
-	TF = \frac{F_{abs_X}}{N} ,
+	TF(x, N) = \frac{F_{abs}(x)}{N} ,
 \end{equation}
-$F_{abs_x}$ é o número de vezes que palavra \textit{x} aparece no documento e \textit{N} o número total de palavras no documento.
+$F_{abs}(x)$ é o número de vezes que palavra \textit{x} aparece no documento e \textit{N} o número total de palavras no documento.
 
 
 
 \subsubsection{Frequência Inversa de Documentos - IDF}
 
 
-Essa técnica leva em conta a quantidade de documentos nos quais um termo aparece, somado a frequência absoluta dos termos. Assim, as palavras que aparecem em poucos documentos têm sua importância aumentada, pois geralmente são as mais discriminantes \cite{ana2007}. A fórmula para o cálculo da  frequência inversa (\textit{inverse document frequency} - IDF) é:
+Essa técnica leva em conta a quantidade de documentos nos quais um termo aparece, somado a frequência absoluta dos termos. Assim, as palavras que aparecem em poucos documentos têm sua importância aumentada, pois geralmente são as mais discriminantes \cite{ana2007}. A fórmula para o cálculo da  frequência inversa (\textit{inverse document frequency} - IDF) de um termo $t$ em um uma coleção $D$ é:
 
 
 
 \begin{equation}
-	IDF_{td} = log\PC{\frac{Freq_{td}}{DocFreq_{td}}} ,	
+	IDF(t,D) = log\frac{|D|}{DocFreq(t,D)},
 \end{equation}
-o grau de relação entre o termo \textit{t} e o documento \textit{d} é $IDF_{td}$, e a quantidade de vezes que o termo \textit{t} aparece no documento \textit{d} é representado por $Freq_{td}$. $DocFreq_{td}$ calcula o número de documento nos quais o termo \textit{t} aparece na coleção.
+sendo $DocFreq(t,D)$ o número de documentos de $D$ em que $t$ ocorre e $|D|$ o número de documentos na coleção $D$. 
+
 
 
 \subsubsection{Frequência de Termo Inverso da Frequência nos Documentos - TFIDF}
@@ -226,9 +237,10 @@ o grau de relação entre o termo \textit{t} e o documento \textit{d} é $IDF_{td}$
 Possui o objetivo de determinar o peso que um termo têm para descrever um documento específico dentre uma coleção, por meio da multiplicação da frequência relativa \textit{TF} e a frequência inversa de documentos \textit{IDF}, conforme apresentado na equação abaixo:
 
 \begin{equation}
-	TFIDF = TF \cdot IDF , 
+	TFIDF(t, d, D) = TF(t,d) \cdot IDF(t,D) , 
 \end{equation} 
-TFIDF é o algoritmo de extração de palavras-chave mais utilizado quando há uma coleção de documentos disponível. 
+TFIDF é uma forma de ponderação bastante utilizada em Mineração de Textos. 
+Podemos considerar como palavras-chave de um texto aquelas que possuem maior valor de TFIDF, já que elas são boas discriminadoras entre os documentos da coleção e possuem frequência maior que as demais.
 
 \begin{comment}
 \subsubsection{Bayer Classifier}
@@ -279,14 +291,16 @@ As frases são então ordenadas pelas probabilidades e selecionados k frases chave
 \end{comment}
 
 \section{Considerações Finais}
-Há diversas maneiras de realizar a extração de padrões de um texto, porém a maioria delas são derivações do TFIDF, método que possui o melhor desempenho quando comparado à outros algoritmos. Com o objetivo de explorar aqueles que não utilizam o TFIDF como base de cálculo, foi selecionado neste trabalho o KeyGraph \cite{ohsawa1998keygraph}, metodologia que considera os \textit{clusters} de um grafo as principais ideias abordadas em um texto, e as palavras responsáveis por conectá-las como as \textit{keywords}, conforme detalhado no Capítulo \ref{cap:keygraph}.
+Há diversas maneiras de realizar a extração de padrões de um texto, porém a maioria delas são derivações do TFIDF.%, método que possui o melhor desempenho quando comparado à outros algoritmos.
+Com o objetivo de explorar aqueles que não utilizam o TFIDF como base de cálculo, foi selecionado neste trabalho o KeyGraph \cite{ohsawa1998keygraph}, metodologia que considera os \textit{clusters} de um grafo as principais ideias abordadas em um texto, e as palavras responsáveis por conectá-las como as \textit{keywords}, conforme detalhado no Capítulo \ref{cap:keygraph}.
 
 
 
 \chapter{KeyGraph} \label{cap:keygraph}
 
 
-O método KeyGraph \cite{ohsawa1998keygraph} se baseia na ideia de que um documento é construído para conter pontos focais, e a correlação de palavras neste documento são responsáveis por expressá-los.  Assim, o algoritmo constrói um grafo, no qual as palavras mais frequentes no texto tornam-se os vértices, e as arestas serão construídas caso a relação entre estes sejam forte. Os \textit{clusters} formados no grafo são os principais conceitos abordados no documento \cite{ohsawa1998keygraph}.
+O método KeyGraph \cite{ohsawa1998keygraph} se baseia na ideia de que um documento é construído para conter pontos focais, e a correlação de palavras neste documento são responsáveis por expressá-los.  Assim, o algoritmo constrói um grafo, no qual as palavras mais frequentes no texto tornam-se os vértices, e as arestas são construídas caso a relação entre estes sejam fortes.
+Os \textit{clusters} formados no grafo são os principais conceitos abordados no documento \cite{ohsawa1998keygraph}.
 
 O algoritmo utilizará importantes conceitos, sendo eles: 
 
@@ -297,15 +311,18 @@ O algoritmo utilizará importantes conceitos, sendo eles:
 \item Componente conexo: subconjunto de vértices de um grafo que pode-se chegar em qualquer um dos vértices a partir de outro vértice do subconjunto, i.e., são alcançáveis entre si.
 \end{itemize}
 
-Houve também a definição de alguns parâmetros:
+Os autores sugerem a seguinte parametrização:
 \begin{itemize}
-\item \(N_{HF} = 30\)
-\item \(N_{HK} = 12\)
-\item \(N_{KW} = 12\)
+\item \(N_{HF} = 30\).
+\item \(N_{HK} = 12\).
+\item \(N_{KW} = 12\).
 \end{itemize}
 
 
-Para um melhor entendimento do passo a passo da metodologia, um pseudocódigo foi desenvolvido:
+%Para um melhor entendimento do passo a passo da metodologia, um pseudocódigo foi desenvolvido:
+Os passos principais do KeyGraph são descritos no Algoritmo \ref{keyg}.
+Na sequência cada subseção apresenta detalhes de cada passo.
+Com o intuito de facilitar a compreensão das etapas, o texto do Capítulo \ref{introducao}  foi submetido ao algoritmo KeyGraph, apresentando em cada seção o resultado obtido.
 
 \algrenewcommand\algorithmicfunction{\textbf{Função}}
 \algrenewcommand\algorithmicend{\textbf{Fim}}
@@ -322,11 +339,13 @@ Para um melhor entendimento do passo a passo da metodologia, um pseudocódigo foi
         \State Extrair $N_{KW}$ palavras-chave
         \EndFunction
     \end{algorithmic}
+    \label{keyg}
 \end{algorithm}
 
 \section{Normalizar Texto}
 
-Inicialmente o texto é submetido ao processo de \textit{stemming} bem como a retirada de \textit{stopwords}. Feito isso, cada sentença do texto será analisada separadamente. Para cada palavra presente na frase, ela será combinada à subsequente e contabilizada a quantidade de vezes que este termo conjugado ocorre nas sentenças do texto. Por exemplo, para uma sentença que possui palavras \textit{a}, \textit{b}, \textit{c}, \textit{d}, \textit{e}, as seguintes combinações serão analisadas: (\textit{a}), (\textit{a,b}), (\textit{a,b,c}), (\textit{a,b,c,d}), (\textit{b}), (\textit{b,c}), (\textit{b,c,d}),(\textit{b,c,d,e}). Com o intuito de facilitar a compreensão das etapas, o texto do Capítulo \ref{introducao}  foi submetido ao algoritmo KeyGraph, apresentando em cada seção o resultado obtido.
+Inicialmente o texto é submetido ao processo de \textit{stemming} bem como a retirada de \textit{stopwords}. Feito isso, cada sentença do texto será analisada separadamente. Para cada palavra presente na frase, ela será combinada à subsequente e contabilizada a quantidade de vezes que este termo conjugado ocorre nas sentenças do texto.
+Por exemplo, para uma sentença que possui palavras \textit{a}, \textit{b}, \textit{c}, \textit{d}, \textit{e}, as seguintes combinações serão analisadas: (\textit{a}), (\textit{a,b}), (\textit{a,b,c}), (\textit{a,b,c,d}), (\textit{b}), (\textit{b,c}), (\textit{b,c,d}),(\textit{b,c,d,e}).
 
 \section{Criar Grafo}
 
@@ -334,9 +353,9 @@ Dentre todas as possíveis combinações, é selecionada aquela que possuir a maior 
 
 Ao analisar o exemplo proposto, definiu-se o valor 10 para o \(HF\), resultando os seguintes termos: \textit{form}, \textit{educac}, \textit{text},  \textit{dad}, \textit{estrut}, \textit{ger}, \textit{merc}, \textit{palavr}, \textit{desd} e \textit{grup}, gerando o grafo da Figura \ref{graf1}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
-\includegraphics{Grafo}
+\includegraphics[scale=0.9]{Grafo}
 \caption{Grafo com \textit{Dterms}}
 \label{graf1}
 \end{figure}
@@ -350,11 +369,11 @@ São adicionadas arestas entre os vértices de \textit{G} que possuírem uma forte 
 \end{equation}
 a quantidade de vezes que o termo \(w_i\) ocorre em uma determinada sentença \(s\), é representado por \(|w_i|_s\). 
 
-Feito isso, são selecionados os \(N_{HF}\)-1 pares com maior valor de \textit{assoc} e cria-se uma aresta conectando eles, este é o menor número de arestas necessárias para conectar todo o grafo. Caso o grafo tenha apenas um conceito básico ele deve formar um único componente conexo, caso contrário, a premissa é que teremos um componente conexo para cada conceito básico. Os pares com maiores valores de \textit{assoc} no exemplo em análise foram (\textit{text,dad}), (\textit{text,palavr}) e (\textit{dad,estruct}). A Figura \ref{graf2} contém o grafo já com a adição das arestas.
+Feito isso, são selecionados os \(N_{HF}\)-1 pares com maior valor de \textit{assoc} e cria-se uma aresta conectando eles, este é o menor número de arestas necessárias para conectar todo o grafo. Caso o grafo tenha apenas um conceito básico ele deve formar um único componente conexo, caso contrário, a premissa é que teremos um componente conexo para cada conceito básico. Os pares com maiores valores de \textit{assoc} no exemplo em análise foram (\textit{text,dad}), (\textit{text,palavr}) e (\textit{dad,estrut}). A Figura \ref{graf2} contém o grafo já com a adição das arestas.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
-\includegraphics{G_aresta}
+\includegraphics[scale=0.9]{G_aresta}
 \caption{Grafo com Arestas}
 \label{graf2}
 \end{figure}
@@ -380,20 +399,25 @@ $
        		\end{cases}
 $
 \end{center}
-\textit{based} é responsável por contabilizar a quantidade de vezes que os termos em \(D_\text{terms}\) e os termos do \textit{cluster} \textit{g} ocorrem na mesma sentença no documento. \textit{neighbors} realiza uma contagem similar, porém leva em consideração todos os termos do documento e não somente os contidos em \(D_\text{terms}\). \(|g-w|_s\) são os termos de \(g\) que são diferentes de \(w\). Para para uma melhor ilustração das definições apresentadas, são listados os 5 termos com maiores \textit{based} e seus respectivos valores (\textit{form}, 35), (\textit{text}, 31), (\textit{dad}, 31), (\textit{estrut}, 28) e (\textit{educac}, 13).
+\textit{based} é responsável por contabilizar a quantidade de vezes que os termos em \(D_\text{terms}\) e os termos do \textit{cluster} \textit{g} ocorrem na mesma sentença no documento. \textit{neighbors} realiza uma contagem similar, porém leva em consideração todos os termos do documento e não somente os contidos em \(D_\text{terms}\). \(|g-w|_s\) são os termos de \(g\) que são diferentes de \(w\).
+Para  uma melhor ilustração das definições apresentadas, são listados os 5 termos com maiores \textit{based} e seus respectivos valores (\textit{form}, 35), (\textit{text}, 31), (\textit{dad}, 31), (\textit{estrut}, 28) e (\textit{educac}, 13).
 
-A divisão dessas funções, resulta o \(key_{w}\), que é a probabilidade do termo \textit{w} aparecer, se todos os conceitos básicos (componentes conexos do grafo) forem considerados pelo autor. A fórmula da \(key_{w}\) é descrita como:
+A partir da divisão desses valores, computa-se o \(key_{w}\), que é a probabilidade do termo \textit{w} aparecer se todos os conceitos básicos (componentes conexos do grafo) forem considerados pelo autor. A fórmula da \(key_{w}\) é descrita como:
 
 \begin{equation}
 key(w) = 1 - \prod_{g \in G} \left(1 - \frac{based(w,g)}{neighbors(g)}\right)\\
 \end{equation}
-Feito isso, são considerados os \(N_{HK}\) termos com maiores valores de \(keys_{w}\). Os termos de \(N_{HK}\) são adicionados como vértices em \textit{G} (vide Figura \ref{grafhk}), caso eles já não se encontrem no mesmo. O cenário ideal seria cada termo de um \textit{cluster} (\textit{foundation}) em \textit{G} estar conectado com todos os outros vértices do seu \textit{cluster}, sem conexão com outros \textit{cluster}. Alguns casos as \textit{foundations} possuem uma leve relação, porém não o suficiente para separá-los.	
+Feito isso, são considerados os \(N_{HK}\) termos com maiores valores de \(key\) como \(HK\).
+Os termos de \(HK\) são adicionados como vértices em \textit{G} (vide Figura \ref{grafhk}), caso eles já não se encontrem no mesmo. O cenário ideal seria cada termo de um \textit{cluster} (\textit{foundation}) em \textit{G} estar conectado com todos os outros vértices do seu \textit{cluster}, sem conexão com outros \textit{clusters}.
+%T: Melhorar essa frase aqui
+Alguns casos as \textit{foundations} possuem uma leve relação, porém não o suficiente para separá-los.	
+
 
 O termo que apresentou o maior valor de \textit{key} foi \textit{dad} com o valor de 0.0955, o que faz todo o sentido, uma vez que ele é de suma importância para a compreensão dos tópicos do documento.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
-\includegraphics{G_com_HK}
+\includegraphics[scale=0.9]{G_com_HK}
 \caption{Grafo com \(N_{HK}\)}
 \label{grafhk}
 \end{figure}
@@ -405,11 +429,12 @@ Para computar a força de uma \textit{column} (ligação entre termos), vemos entre
     \text{column}(w_i, w_j) = \sum_{s \in D} \min(|w_i|_s, |w_j|_s),
 \end{equation}
 selecionam-se os maiores valores de \textit{column} conectando \(|w_i|_s\) a dois ou mais grupos, e estas arestas são adicionadas ao grafo.
-Para cada aresta do grafo, é verificado se a mesma é de corte \footnote{é uma aresta cuja remoção em um grafo, aumenta o número de componentes conectados deste} para os vértices em que estão conectadas. Caso sejam de corte, essas arestas são removidas do grafo. O resultado da remoção dessas arestas no grafo de exemplo é apresentando na Figura \ref{graf3}.
+Para cada aresta do grafo, é verificado se a mesma é de corte\footnote{Aresta cuja remoção em um grafo, aumenta o número de componentes conectados deste.} para os vértices em que estão conectadas. Caso sejam de corte, essas arestas são removidas do grafo. O resultado da remoção dessas arestas no grafo de exemplo é apresentando na Figura \ref{graf3}.
 
-Os maiores valores de \textit{column} do exercício, foram ('text', 14), ('dad', 9), ('form', 8) e ('estrut', 6). Para conseguir um melhor detalhamento, foi selecionado o \textit{cluster} {'dad', 'text', 'palavr', 'estrut', 'conteud'}, pois no mesmo será perceptível a remoção da aresta de corte entre \textit{palavr} e \textit{conteud}.
+Os maiores valores de \textit{column} do exemplo foram ('text', 14), ('dad', 9), ('form', 8) e ('estrut', 6). Para conseguir um melhor detalhamento, foi selecionado o \textit{cluster} {'dad', 'text', 'palavr', 'estrut', 'conteud'}, pois no mesmo será perceptível a remoção da aresta de corte entre \textit{palavr} e \textit{conteud}.
 
-\begin{figure}[h!]
+%T: tem como melhorar essa figura?
+\begin{figure}[ht!]
 \centering
 \includegraphics{G_final}
 \caption{Grafo sem Aresta de Corte}
@@ -418,10 +443,11 @@ Os maiores valores de \textit{column} do exercício, foram ('text', 14), ('dad', 
 
 \section{Extrair Keywords} 
 
-Os vértices do grafo são ordenados pela soma de valores de \textit{column} que chegam neles. São selecionados os \(N_{HK}\) com os maiores valores de soma, resultando nas palavras chave.  O \(N_{HK}\) do exemplo foi definido com o valor 4, isso devido ao tamanho do texto e a quantidade de tokens gerados. Assim, as \textit{keywords} selecionadas foram \textit{text}, \textit{dad}, \textit{estrut} e \textit{analis}
+Os vértices do grafo são ordenados pela soma de valores de \textit{column} que chegam neles. São selecionados os \(N_{HK}\) com os maiores valores de soma, resultando nas palavras-chave.
+O \(N_{HK}\) do exemplo foi definido com o valor 4, isso devido ao tamanho do texto e a quantidade de tokens gerados. Assim, as \textit{keywords} selecionadas foram \textit{text}, \textit{dad}, \textit{estrut} e \textit{analis}.
 
 \section{Considerações Finais}
-O diferencial deste método é a extração de palavras chaves de documentos únicos, sem a necessidade de uma coleção na qual frequências de termos seriam calculados. Sua atribuição de pesos é baseada na importância que os termos possuem para o entendimentos dos principais assuntos abordados no documento, por meio de cálculo da probabilidade de um termo conectar dois temas ( \textit{clusters} em \(g\)) e a probabilidade do termo estar no documento quando todos os temas ocorrem. Assim, as palavras extraídas são aquelas que possuem maior impacto para o entendimento dos assuntos do documento e/ou realizam a conexão entre dois temas abordados no texto.
+O diferencial deste método é a extração de palavras-chaves de documentos únicos, sem a necessidade de uma coleção na qual frequências de termos seriam calculados. Sua atribuição de pesos é baseada na importância que os termos possuem para o entendimentos dos principais assuntos abordados no documento, por meio de cálculo da probabilidade de um termo conectar dois temas (\textit{clusters} em \(g\)) e a probabilidade do termo estar no documento quando todos os temas ocorrem. Assim, as palavras extraídas são aquelas que possuem maior impacto para o entendimento dos assuntos do documento e/ou realizam a conexão entre dois temas abordados no texto.
 
 \chapter{Análise de Resultados}
 
@@ -429,7 +455,8 @@ O diferencial deste método é a extração de palavras chaves de documentos únicos,
 Neste capítulo são descritos e analisados os experimentos realizados na avaliação do método KeyGraph. Este, será aplicado na recomendação de avaliadores  para artigos e projetos escritos na língua portuguesa , para tanto, foram selecionados dez docentes, sendo eles: Cristiane Sato, Denis Fantinato, Emilio Francesquini, Fabrício Olivetti, Guilherme Mota, Harlen Bargatelo, João Gois, Maycon Sambinelli, Raphael Camargo e Thiago Covões. Apesar de todos serem da área da Ciência da Computação, possuem linhas de pesquisas distintas. Harlen Bargatelo e João Gois ambos atuam no campo de Computação Gráfica, outro grupo que possui linha de pesquisa em comum são Guilherme Mota, Cristiane Sato e Maycon Sambinelli, voltados para Teoria dos Grafos e Matemática da Computação. Dois docentes que apesar de não trabalharem na mesma área, estão relacionadas são Emilio Francesquini com projetos em Computação Paralela e Sistemas Distribuídos e Raphael Camargo atuando com Neurociência Computacional. Por fim, Thiago Covões possui similaridade com Mineração de Dados enquanto Fabrício Olivetti estuda a área de Inteligência Artificial e Denis Fantinato focado em Processamento de Sinais.
 
 
-Foi realizado a seleção de 10 artigos que discutissem diferentes áreas de pesquisas da Ciência da Computação. Os mesmos foram escolhidos dentre múltiplas  conferências, sendo elas: Anais do Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), Escola Nacional de Alto Desempenho (ERAD), Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBRT), Anais Estendidos da Conference on Graphics, Patterens and Images(SIBGRAPI) e Anais do Encontro de Teoria da Computação (ETC). Os artigos serão apresentados na Tabela \ref{tab:artigo}, contendo seus  respectivos nomes, conferências da qual foi extraído e docentes que possuírem afinidade.
+Foi realizado a seleção de 10 artigos que discutissem diferentes áreas de pesquisas da Ciência da Computação. Os mesmos foram escolhidos dentre múltiplas  conferências, sendo elas: Anais do Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), Escola Nacional de Alto Desempenho (ERAD), Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBRT), Anais Estendidos da Conference on Graphics, Patterens and Images(SIBGRAPI) e Anais do Encontro de Teoria da Computação (ETC).
+Os artigos são apresentados na Tabela \ref{tab:artigo}, contendo seus  respectivos nomes, conferências da qual foi extraído e docentes que possuírem afinidade.
 
 
 
@@ -445,7 +472,7 @@ Foi realizado a seleção de 10 artigos que discutissem diferentes áreas de pesqui
 \hline                            
 1 & Sistema de medição e análise de qualidade de redes celulares móveis & SBRT & Denis Fantinato\\
 \hline 
-2 & Um método para disciminação entre PSK e FSK uitlizando estatísticas de ordem superior & SBRT& Denis Fantinato \\
+2 & Um método para disciminação entre PSK e FSK utilizando estatísticas de ordem superior & SBRT& Denis Fantinato \\
 \hline 
 3 & Avaliação de desempenho de wavelet shrinkage pela esparsidade dos coeficientes  & SBRT & Denis Fantinato \\
 \hline 
@@ -482,11 +509,11 @@ Foi realizado a seleção de 10 artigos que discutissem diferentes áreas de pesqui
 
 No decorrer do capítulo é abordado constantemente dois conjuntos de textos. Para facilitar a distinção entre eles, adotou-se os termos \textit{texto-base} e \textit{texto-avaliado}. Sendo o \textit{texto-base}, relativo aos docentes e \textit{texto-avaliado} ao artigo que está sob análise. Vale ressaltar que todos os textos utilizados neste experimento receberam um tratamento, por meio do processo de normalização, remoção de acentos, \textit{stemming} e retirada de \textit{stopwords}.
 
-Com objetivo de comparação e avaliação dos resultados, todos os \textit{texto-avaliado} foram submetidos à duas metodologias: TFIDF e KeyGraph. Inicialmente será discorrido sobre o TFIDF e como são as etapas de tratamento de cada um dos conjuntos de textos. Em seguida, é apresentado o KeyGraph e como é realizado a sua integração com o TFIDF. Por fim, os resultados dos métodos serão ranqueados por meio de um cálculo que utilizará a similaridade de cossenos como base, como também serão dispostos na forma de mapas de calor para uma melhor visualização.
+Com objetivo de comparação e avaliação dos resultados, todos os \textit{texto-avaliado} foram submetidos à duas metodologias: TFIDF e KeyGraph. Inicialmente será discorrido sobre o TFIDF e como são as etapas de tratamento de cada um dos conjuntos de textos. Em seguida, é apresentado o KeyGraph e como é realizado a sua integração com o TFIDF. Por fim, os resultados dos métodos são ranqueados por meio de um cálculo que utilizará a similaridade de cossenos como base, como também  dispostos na forma de mapas de calor para uma melhor visualização.
 
 Para a construção do \textit{texto-base}, utilizou-se as dissertações dos docentes, ou seja, cada um possui respectivamente o seu trabalho de mestrado em seu \textit{texto-base}. Feito isso, é computado a Frequência Relativa (TF) de todos os termos do \textit{texto-base}. Em seguida, calcula-se o Inverso da Frequência do Documento (IDF), baseando-se na coleção de todos os textos-base. Por fim, para todos os termos multiplica-se o TF com o seu respectivo IDF, resultando no TFIDF. Da mesma forma o \textit{texto-avaliado} é submetido aos procedimentos descritos, com a diferença que o IDF é o mesmo previamente calculado no \textit{texto-base}. Caso haja um termo no \textit{texto-avaliado} que não se encontra na coleção dos textos-base, é atribuído o valor 0 de IDF ao mesmo. Para um melhor entendimento foi desenvolvido um fluxograma das etapas na Figura \ref{flux}.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics{fluxograma}
 \caption{Fluxograma TFIDF}
@@ -498,7 +525,7 @@ Para a construção do \textit{texto-base}, utilizou-se as dissertações dos docent
 O \textit{texto-avaliado} é então submetido ao método do KeyGraph para a extração de suas palavras-chave. Na sequência é aplicado o mesmo procedimento do TFIDF, porém ao invés de utilizar o \textit{texto-avaliado} é considerado os termos extraídos pelo KeyGraph, conforme apresentado na Figura \ref{flux_key}.
 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics{flux_key}
 \caption{Fluxograma KeyGraph}
@@ -517,14 +544,17 @@ Com o intuito de alcançar uma análise apurada, foram utilizados diferentes parâm
 
 
 \begin{itemize}
-\item TFIDFG: TFIDF - considerando as palavras do \textit{texto-avaliado};
+\item TFIDFG: TFIDF - considerando todas as palavras do \textit{texto-avaliado};
 \item TFIDF15: TFIDF - com as 15 palavras mais frequentes (TF) do \textit{texto-avaliado};
 \item TFIDF12: TFIDF - com as 12 palavras mais frequentes (TF) do \textit{texto-avaliado};
-\item KeyGraph30: Keygraph - \(N_{HF} = 30\), \(N_{HK} = 12\) e \(N_{KW} = 12\);
-\item KeyGraph50: Keygraph - \(N_{HF} = 50\), \(N_{HK} = 15\) e \(N_{KW} = 15\).
+\item KeyGraph30: Keygraph parametrizado por: \(N_{HF} = 30\), \(N_{HK} = 12\) e \(N_{KW} = 12\);
+\item KeyGraph50: Keygraph parametrizado por: \(N_{HF} = 50\), \(N_{HK} = 15\) e \(N_{KW} = 15\).
 \end{itemize}
 
-Para mensurar a eficácia de cada metodologia, utilizou-se de um cálculo que se baseia na posição em que o docente, que de fato possui similaridade com o artigo, foi classificado. Por exemplo, sabe-se que o artigo retirado da conferência SBRT, possui maior similaridade com o Denis Fantinato, uma vez que sua área de atuação é amplamente abordada na conferência. Dito isto, caso a metodologia classifique ele em primeiro nestes artigos, será atribuído o valor 1, caso ele fique na quinta posição, é atribuído o valor 5. Esse processo é realizado para todos os artigos, e os docentes que se relacionam ao mesmo. No final, essa nota é dividida pelo número de artigos. A Tabela \ref{tab:notas} contém as notas calculadas para cada uma das metodologias após os experimentos
+Para mensurar a eficácia de cada metodologia, utilizou-se de um cálculo que se baseia na posição em que o docente, que de fato possui similaridade com o artigo, foi classificado. Por exemplo, sabe-se que o artigo retirado da conferência SBRT, possui maior similaridade com o Denis Fantinato, uma vez que sua área de atuação é amplamente abordada na conferência. Dito isto, caso a metodologia classifique ele em primeiro nestes artigos, será atribuído o valor 1, caso ele fique na quinta posição, é atribuído o valor 5. Esse processo é realizado para todos os artigos, e os docentes que se relacionam ao mesmo.
+No final, essa nota é dividida pelo número de artigos.
+Portanto, quanto mais próxima de 1, melhor o desempenho da metodologia.
+A Tabela \ref{tab:notas} contém as notas calculadas para cada uma das metodologias considerando os experimentos realizados com o artigos da Tabela \ref{tab:artigo}.
 
 \begin{table}[h]
 \label{tab:notas}
@@ -550,69 +580,76 @@ KeyGraph50 & 7\\
 \end{table}
 
 
-Os resultados apresentados também no modelo de mapas de calor, nos quais as linhas do gráfico representam os docentes e as colunas os artigos. As cores mais escuras representam os docentes que possuem maior similaridade com o artigo em questão. Importante ressaltar que os valores dispostos no mapa de calor são referentes as similaridades de cossenos resultantes de cada uma das metodologias. Os valores da similaridade foram normalizados, melhorando assim a visualização dos dados. 
+Os resultados específicos de cada artigo são apresentados na forma de mapas de calor nas Figuras \ref{key_30},\ref{key_50},\ref{tfidfg},\ref{tfidf12} e \ref{tfidf15}.
+Nestas figuras as linhas representam os docentes e as colunas os artigos. As cores mais escuras representam os docentes que possuem maior similaridade com o artigo em questão. Importante ressaltar que os valores dispostos no mapa de calor são referentes as similaridades de cossenos resultantes de cada uma das metodologias. Os valores da similaridade foram normalizados, melhorando assim a visualização dos dados. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics{KEY30}
 \caption{Mapa de Calor - Keygraph \(N_{HF} = 30\), \(N_{HK} = 12\) e \(N_{KW} = 12\) }
 \label{key_30}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics{KEY50}
 \caption{Mapa de Calor - Keygraph \(N_{HF} = 50\), \(N_{HK} = 15\) e \(N_{KW} = 15\) }
 \label{key_50}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics{TFGERAL}
 \caption{Mapa de Calor - TFIDF todas as palavras }
-\label{tfidf}
+\label{tfidfg}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics{TF12}
 \caption{Mapa de Calor - TFIDF com 12 termos mais frequentes}
-\label{tfidf}
+\label{tfidf12}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics{TF15}
 \caption{Mapa de Calor - TFIDF com 15 termos mais frequentes }
-\label{tfidf}
+\label{tfidf15}
 \end{figure}
 
 
 
 Tanto visualmente por meio dos mapas de calor, quanto pelos cálculos fica evidente a superioridade do TFIDF sobre o KeyGraph. Esse resultado é interessante visto que o TFIDF é uma uma medida estatística muito popular, devido a sua confiabilidade em identificar a importância de uma palavra dentre uma coleção. Já o KeyGraph possui outra abordagem, que evita a necessidade de uma coleção de documentos para apontar palavras-chave, além de não levar em conta nenhum cálculo de frequência do termo.
 
-Pelo fato do KeyGraph extrair um número pequeno de palavras-chave, a metodologia enfrenta dificuldades em identificar temas específicos. Na grande maioria dos textos, as palavras-chave extraídas eram de âmbito geral da grande área da Ciência da Computação, tais como "dados", "algoritmo" e "sistema", ou seja, termos que possuem sempre muita ocorrência nos textos referentes a área de tecnologia. Assim, a metodologia não consegue apontar o docente que possui a maior relação com o texto, uma vez as palavras-chave são constantes na maioria dos textos-avaliado e textos-base. Isso resulta  em similaridades parelhas, impossibilitando diferenciar docentes que possuem destaque em uma linha de pesquisa específica.
+Pelo fato do KeyGraph extrair um número pequeno de palavras-chave, a metodologia enfrenta dificuldades em identificar temas específicos. Na grande maioria dos textos, as palavras-chave extraídas eram de âmbito geral da grande área da Ciência da Computação, tais como ``dados'', ``algoritmo'' e ``sistema'', ou seja, termos que possuem sempre muita ocorrência nos textos referentes a área de tecnologia. Assim, a metodologia não consegue apontar o docente que possui a maior relação com o texto, uma vez as palavras-chave são similares na maioria dos textos-avaliado e textos-base. Isso resulta  em similaridades parelhas, impossibilitando diferenciar docentes que possuem destaque em uma linha de pesquisa específica.
 
-Vale ressaltar que os dois cenários no qual o KeyGraph foi exposto, de uma maneira geral, apresentou pequenas diferença de comportamento. Visto que, em um número de artigos seu desempenho foi superior com o KeyGraph30, como no Proj1 no qual o docente foi recomendado na primeira posição enquanto no KeyGraph50 o mesmo caiu para a quinta posição. Por outro lado, no Proj2 haviam dois docentes diretamente relacionados ao artigo, com os parâmetros do KeyGraph50 eles foram ranqueados em primeiro e terceiro, em contrapartida eles passaram para terceiro e quarto no KeyGraph30. Em suma, a alteração de parâmetros do KeyGraph, fez com que um número de artigos fosse melhor avaliado, mas por outro lado piorou o desempenho do restante, ou seja, não impactando no resultado geral, uma vez que a nota do algoritmo em ambos os casos foi a mesma.
+Vale ressaltar que os dois cenários no qual o KeyGraph foi exposto, de uma maneira geral, apresentou pequenas diferença de comportamento. Visto que, em um número de artigos seu desempenho foi superior com o KeyGraph30, como no Artigo 1 no qual o docente foi recomendado na primeira posição enquanto no KeyGraph50 o mesmo caiu para a quinta posição. Por outro lado, no Artigo 2 haviam dois docentes diretamente relacionados ao artigo, com os parâmetros do KeyGraph50 eles foram ranqueados em primeiro e terceiro, em contrapartida eles passaram para terceiro e quarto no KeyGraph30. Em suma, a alteração de parâmetros do KeyGraph, fez com que um número de artigos fosse melhor avaliado, mas por outro lado piorou o desempenho do restante, ou seja, não impactando no resultado geral, uma vez que a nota do algoritmo em ambos os casos foi a mesma.
 
 
-uma variação nos parâmetros utilizados na metodologia não impactaram no resultado geral, isso porque a nota geral do algoritmo se manteve a mesma.
+%uma variação nos parâmetros utilizados na metodologia não impactaram no resultado geral, isso porque a nota geral do algoritmo se manteve a mesma.
+
 
 O mesmo vale para o TFIDF que apresentou leves variações com as mudanças nos parâmetros, porém mesmo nos cenários em que foram utilizados a mesma quantidade de termos do KeyGraph, TFIDF12 e TFIDF15, o desempenho se manteve constante e melhor quando comparado ao KeyGraph30 e KeyGraph50. Ressaltando a superioridade do TFIDF quando comparado a uma quantidade equivalente de termos, o que em teoria deveria representar a mesma adversidade enfrentado pelo KeyGraph em trabalhar com termos muito abrangentes, o TFIDF se mostrou uma formulação que melhor aproveitou as informações de frequência dos termos.
+%T: não sei se concordo com isso. O TF12 e TF15 teve similaridades muito próximas para vários artigos também!
 
 
 
 \chapter{Conclusão e Trabalhos Futuros}
 
+%T: aqui é importante você sumarizar os resultados também, ficou bem pessoal e deixou os resultados de lado. Coloca um parágrafo sobre conclusão do trabalho em si (tfidf é bom o suficiente)
+
 Trabalhar com textos em geral é uma tarefa árdua, no qual os mínimos detalhes impactam
-diretamente no resultado final. São diversas etapas para tratamento do texto, afim de possibilitar um
-manuseio mais "limpo". O KeyGraph é um exemplo disso, no qual a simples decisão de como
-selecionar uma sentença em um texto, reflete diretamente na saída do algoritmo. Uma grande
-dificuldade encontrada no projeto, foi a leitura dos textos presente nos PDF?s, uma vez que o modo como o documento foi salvo, alteram-se as configuração do arquivo, e no momento de extração
+diretamente no resultado final. São diversas etapas para tratamento do texto, afim de possibilitar uma análise mais correta.
+O KeyGraph é um exemplo disso, no qual a simples decisão de como
+selecionar uma sentença em um texto, reflete diretamente na saída do algoritmo.
+%T: essa frase está confusa
+Uma grande dificuldade encontrada no projeto, foi a leitura dos textos presente nos PDFs, uma vez que o modo como o documento foi salvo, alteram-se as configuração do arquivo, e no momento de extração
 deste texto, é necessário interpretar todas elas.
 
 Além disso, por não haver muita documentação referente ao KeyGraph e não ser código aberto, foi
-necessário a implementação do método, baseando-se apenas no artigo (referenciar artigo). Muitas
+necessário a implementação do método, baseando-se apenas no artigo \cite{ohsawa1998keygraph}.
+Muitas
 definições apresentadas não estavam claras, e foi necessário interpretar algumas delas, de forma que
 faria sentido para o projeto.
 
@@ -630,10 +667,13 @@ realizadas no KeyGraph e além das matérias, a Iniciação Científica desenvolvida 
 ano, construiu um pequeno conhecimento em escrita de trabalho cientifico.
 
 Embora os resultados encontrados não serem o esperado, há possibilidades para aprimorar esta
-pesquisa. Acredito que o aumento da coleção dos docentes é um ponto de suma importância, tanto
-na questão de quantidade de documentos, como na de docentes. Com a adição de artigos
+pesquisa.
+O aumento da coleção dos docentes é um ponto de suma importância, tanto
+na questão de quantidade de documentos, como para avaliar o uso da ferramente.
+Com a adição de artigos
 publicados, orientações de mestrado/doutorado e projetos de pesquisa à coleção, a linha de pesquisa
-do docente se manterá sempre atualizada. Possibilitando uma maior eficiência do algoritmo, uma
+do docente se manterá sempre atualizada.
+Possibilitando uma maior eficácia do algoritmo, uma
 vez que ele estará trabalhando com dados atuais.
 
 %%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%
