@@ -1,7 +1,6 @@
 
 \documentclass[a4paper, 12pt, oneside, brazil]{memoir}
 
-
 %--->>>Packages e Configuracoes
 
 \input{config} %%este arquivo contem mais detalhes da configuracao deste modelo
@@ -107,8 +106,7 @@ Dessa forma, evita-se a seleção daqueles que não possuem proximidade ao tema abo
 O principal objetivo deste trabalho é desenvolver um processo no qual, por meio de técnicas de mineração de textos, identifica-se os docentes que possuem maior afinidade com a área de pesquisa de um trabalho sujeito a avaliação.
 Para tanto, utiliza-se as dissertações de mestrado dos docentes, com o intuito de identificar suas principais áreas de pesquisas.
 
-%T: De onde saiu esse grupo? Não fizemos nada disso! Substituir este texto por objetivo específico falando da extração de palavras-chave e de comparar a abordagem do keygraph
-Como objetivo secundário, visa-se realizar um agrupamento de docentes baseado em suas áreas de pesquisas. A ideia é semelhante ao objetivo principal, porém ao invés da leitura de um trabalho, serão analisados as dissertações dos docentes e assim associar aqueles possuem maiores semelhanças. Os grupos serão de extrema utilidade, pois atualmente nos sites da UFABC as informações sobre os docentes e suas respectivas áreas de atuações, em sua maioria estão incorretas e/ou desatualizadas. Devido a isso, os discentes acabam enfrentando diversas dificuldades entre elas, a escolha de um professor orientador que atue na área de pesquisa do projeto ou identificar um docente apto a sanar dúvidas referentes a uma determinada área. 
+Como objetivo secundário, visa-se realizar a comparação de desempenho entre duas técnicas de extração de palavras chave, sendo elas a Frequência de Termo Inverso da Frequência nos Documentos (TFIDF) e o KeyGraph. Para tanto, os experimentos serão executados em diferentes cenários, possibilitando verificar qual delas atingiu melhores resultados.  
 
 
 
@@ -136,8 +134,6 @@ Para que o processo realize as comparações entre as palavras, é de extrema impor
 Para identificar palavras-chave (\textit{key words}) são utilizados critérios estatísticos ou modelos matemáticos.
 Para cada palavra-chave do texto de entrada, será realizada uma comparação entre as palavras-chave retiradas das dissertações dos docentes.
 Os docentes que obtiverem maior frequência de tais palavras ou que tenham alguma identificação de correlação com tais palavras, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para comporem a banca.
-%T: Não sei do que tu tá falando aqui
-Visando o objetivo secundário, o processo será similar, porém as palavras chave comparadas serão somente aquelas identificadas nas dissertações, e o objetivo da correlação será o agrupamento daqueles que atuam na mesma área.
 
 
 \section{Pós Processamento}
@@ -410,14 +406,14 @@ key(w) = 1 - \prod_{g \in G} \left(1 - \frac{based(w,g)}{neighbors(g)}\right)\\
 Feito isso, são considerados os \(N_{HK}\) termos com maiores valores de \(key\) como \(HK\).
 Os termos de \(HK\) são adicionados como vértices em \textit{G} (vide Figura \ref{grafhk}), caso eles já não se encontrem no mesmo. O cenário ideal seria cada termo de um \textit{cluster} (\textit{foundation}) em \textit{G} estar conectado com todos os outros vértices do seu \textit{cluster}, sem conexão com outros \textit{clusters}.
 %T: Melhorar essa frase aqui
-Alguns casos as \textit{foundations} possuem uma leve relação, porém não o suficiente para separá-los.	
+%Alguns casos as \textit{foundations} possuem uma leve relação, porém não o suficiente para separá-los.	
 
 
 O termo que apresentou o maior valor de \textit{key} foi \textit{dad} com o valor de 0.0955, o que faz todo o sentido, uma vez que ele é de suma importância para a compreensão dos tópicos do documento.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[scale=0.9]{G_com_HK}
+\includegraphics[scale=0.9]{cluster2}
 \caption{Grafo com \(N_{HK}\)}
 \label{grafhk}
 \end{figure}
@@ -429,17 +425,17 @@ Para computar a força de uma \textit{column} (ligação entre termos), vemos entre
     \text{column}(w_i, w_j) = \sum_{s \in D} \min(|w_i|_s, |w_j|_s),
 \end{equation}
 selecionam-se os maiores valores de \textit{column} conectando \(|w_i|_s\) a dois ou mais grupos, e estas arestas são adicionadas ao grafo.
-Para cada aresta do grafo, é verificado se a mesma é de corte\footnote{Aresta cuja remoção em um grafo, aumenta o número de componentes conectados deste.} para os vértices em que estão conectadas. Caso sejam de corte, essas arestas são removidas do grafo. O resultado da remoção dessas arestas no grafo de exemplo é apresentando na Figura \ref{graf3}.
+Para cada aresta do grafo, é verificado se a mesma é de corte\footnote{Aresta cuja remoção em um grafo, aumenta o número de componentes conectados deste.} para os vértices em que estão conectadas. Caso sejam de corte, essas arestas são removidas do grafo. Os maiores valores de \textit{column} do exemplo foram ('text', 14), ('dad', 9), ('form', 8) e ('estrut', 6). %O resultado da remoção dessas arestas no grafo de exemplo é apresentando na Figura \ref{graf3}.
 
-Os maiores valores de \textit{column} do exemplo foram ('text', 14), ('dad', 9), ('form', 8) e ('estrut', 6). Para conseguir um melhor detalhamento, foi selecionado o \textit{cluster} {'dad', 'text', 'palavr', 'estrut', 'conteud'}, pois no mesmo será perceptível a remoção da aresta de corte entre \textit{palavr} e \textit{conteud}.
+ %Para conseguir um melhor detalhamento, foi selecionado o \textit{cluster} {'dad', 'text', 'palavr', 'estrut', 'conteud'}, pois no mesmo será perceptível a remoção da aresta de corte entre \textit{palavr} e \textit{conteud}.
 
 %T: tem como melhorar essa figura?
-\begin{figure}[ht!]
-\centering
-\includegraphics{G_final}
-\caption{Grafo sem Aresta de Corte}
-\label{graf3}
-\end{figure}
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics{gfinalf}
+%\caption{Grafo sem Aresta de Corte}
+%\label{graf3}
+%\end{figure}
 
 \section{Extrair Keywords} 
 
@@ -630,7 +626,7 @@ Vale ressaltar que os dois cenários no qual o KeyGraph foi exposto, de uma manei
 %uma variação nos parâmetros utilizados na metodologia não impactaram no resultado geral, isso porque a nota geral do algoritmo se manteve a mesma.
 
 
-O mesmo vale para o TFIDF que apresentou leves variações com as mudanças nos parâmetros, porém mesmo nos cenários em que foram utilizados a mesma quantidade de termos do KeyGraph, TFIDF12 e TFIDF15, o desempenho se manteve constante e melhor quando comparado ao KeyGraph30 e KeyGraph50. Ressaltando a superioridade do TFIDF quando comparado a uma quantidade equivalente de termos, o que em teoria deveria representar a mesma adversidade enfrentado pelo KeyGraph em trabalhar com termos muito abrangentes, o TFIDF se mostrou uma formulação que melhor aproveitou as informações de frequência dos termos.
+O mesmo vale para o TFIDF que apresentou leves variações com as mudanças nos parâmetros, porém mesmo nos cenários em que foram utilizados a mesma quantidade de termos do KeyGraph, TFIDF12 e TFIDF15, o desempenho se manteve constante e melhor quando comparado ao KeyGraph30 e KeyGraph50. Ressaltando a superioridade do TFIDF quando comparado a uma quantidade equivalente de termos, o que em teoria deveria representar a mesma adversidade enfrentado pelo KeyGraph em trabalhar com termos muito abrangentes, o TFIDF apresentou resultados estáveis, pois apesar dos diferentes cenários à que foi submetido, manteve notas próximas em todos.
 %T: não sei se concordo com isso. O TF12 e TF15 teve similaridades muito próximas para vários artigos também!
 
 
@@ -644,37 +640,22 @@ diretamente no resultado final. São diversas etapas para tratamento do texto, af
 O KeyGraph é um exemplo disso, no qual a simples decisão de como
 selecionar uma sentença em um texto, reflete diretamente na saída do algoritmo.
 %T: essa frase está confusa
-Uma grande dificuldade encontrada no projeto, foi a leitura dos textos presente nos PDFs, uma vez que o modo como o documento foi salvo, alteram-se as configuração do arquivo, e no momento de extração
-deste texto, é necessário interpretar todas elas.
+Uma grande dificuldade encontrada no projeto, foi a leitura dos textos presente nos PDFs, pois além de não ser uma base de dados linear, como um arquivo CSV por exemplo, há diferente maneiras que um texto é codificado dentro de um PDF. 
 
-Além disso, por não haver muita documentação referente ao KeyGraph e não ser código aberto, foi
-necessário a implementação do método, baseando-se apenas no artigo \cite{ohsawa1998keygraph}.
-Muitas
-definições apresentadas não estavam claras, e foi necessário interpretar algumas delas, de forma que
-faria sentido para o projeto.
 
-Inicialmente, a ideia era realizar a leitura do currículo Lattes de cada docente para a geração do
-\textit{texto-base}, e foi realizado uma implementação para tal. Porém, grande parte de dados relevantes
-presentes nas página estavam na língua inglesa, o que impossibilitou a sua utilização porque o
-\textit{texto-base} e o \textit{texto-avaliado} devem estar na mesma língua.
+Além disso, por não haver muita documentação referente ao KeyGraph e não ser código aberto, foi necessário a implementação do método, baseando-se apenas no artigo \cite{ohsawa1998keygraph}. Muitas definições apresentadas não estavam claras, e foi necessário interpretar algumas delas, de forma que faria sentido para o projeto.
 
-Mas apesar das dificuldades, o conhecimento adquirido durante o período na Universidade ajudou a
-sanar grande parte delas. Apesar de todas as matérias cursadas terem o seu papel, algumas merecem
-um maior destaque, como Programação Orientada a Objetos, na qual eu tive o primeiro contato
-com a linguagem Python, utilizada nas implementações de todos os algoritmos aqui presentes,
-Análise de Algoritmo que foi essencial para a otimização do código, pois diversas comparações são
-realizadas no KeyGraph e além das matérias, a Iniciação Científica desenvolvida no meu segundo
+Inicialmente, a ideia era realizar a leitura do currículo Lattes de cada docente para a geração do \textit{texto-base}, e foi realizado uma implementação para tal. Porém, grande parte de dados relevantes presentes nas página estavam na língua inglesa, o que impossibilitou a sua utilização porque o \textit{texto-base} e o \textit{texto-avaliado} devem estar na mesma língua.
+
+Mas apesar das dificuldades, o conhecimento adquirido durante o período na Universidade ajudou a sanar grande parte delas. Apesar de todas as matérias cursadas terem o seu papel, algumas merecem um maior destaque, como Programação Orientada a Objetos, na qual eu tive o primeiro contato
+com a linguagem Python, utilizada nas implementações de todos os algoritmos aqui presentes, Análise de Algoritmo que foi essencial para a otimização do código, pois diversas comparações são realizadas no KeyGraph e além das matérias, a Iniciação Científica desenvolvida no meu segundo
 ano, construiu um pequeno conhecimento em escrita de trabalho cientifico.
 
-Embora os resultados encontrados não serem o esperado, há possibilidades para aprimorar esta
-pesquisa.
-O aumento da coleção dos docentes é um ponto de suma importância, tanto
-na questão de quantidade de documentos, como para avaliar o uso da ferramente.
-Com a adição de artigos
-publicados, orientações de mestrado/doutorado e projetos de pesquisa à coleção, a linha de pesquisa
-do docente se manterá sempre atualizada.
-Possibilitando uma maior eficácia do algoritmo, uma
-vez que ele estará trabalhando com dados atuais.
+%M - Paragrafo alterado
+Em suma, o TFIDF foi superior ao KeyGraph e manteve constantes resultados, indicando na maioria dos testes, o docente com maior relação ao tema como parte da banca avaliadora. O KeyGraph é uma metodologia interessante, pois evita a dependência de uma coleção de documentos, por outro lado é notório o impacto disso no seu desempenho. Dito isto, o KeyGraph não seria uma escolha viável para a formação das bancas, pois sua taxa de acerto é baixa, o TFIDF por sua vez possui resultados constantes e assertivos, possibilitando utilizá-lo como ferramenta para a recomendação dos docentes.
+Embora os resultados encontrados não serem o esperado, há possibilidades para aprimorar esta pesquisa.
+O aumento da coleção dos docentes é um ponto de suma importância, tanto na questão de quantidade de documentos, como para avaliar o uso da ferramente. Com a adição de artigos publicados, orientações de mestrado/doutorado e projetos de pesquisa à coleção, a linha de pesquisa
+do docente se manterá sempre atualizada. Possibilitando uma maior eficácia do algoritmo, uma vez que ele estará trabalhando com dados atuais.
 
 %%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%
 \bibliographystyle{abnt-alf} %estilo de bibliografia

@@ -28,7 +28,7 @@
 \contentsline {section}{\numberline {6.4}Calcular Keys}{17}{section.6.4}% 
 \contentsline {section}{\numberline {6.5}Calcular Columns}{18}{section.6.5}% 
 \contentsline {section}{\numberline {6.6}Extrair Keywords}{19}{section.6.6}% 
-\contentsline {section}{\numberline {6.7}Considera\c c\~oes Finais}{20}{section.6.7}% 
+\contentsline {section}{\numberline {6.7}Considera\c c\~oes Finais}{19}{section.6.7}% 
 \contentsline {chapter}{\chapternumberline {7}An\'alise de Resultados}{21}{chapter.7}% 
 \contentsline {section}{\numberline {7.1}Considera\c c\~oes Iniciais}{21}{section.7.1}% 
 \contentsline {section}{\numberline {7.2}Metodologia}{23}{section.7.2}% 
