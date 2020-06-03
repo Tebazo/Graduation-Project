@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.19)  19 MAY 2020 03:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.19)  2 JUN 2020 22:01
 entering extended mode
 **./projgraduacao.tex
 (projgraduacao.tex
@@ -1451,115 +1451,114 @@ File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 
 ] [5] [6
 
-] [7
-
-] [8]
-Overfull \hbox (0.20331pt too wide) in paragraph at lines 154--155
+]
+Overfull \hbox (0.20331pt too wide) in paragraph at lines 125--126
 \T1/futs/m/n/12 in-ter-pre-ta-ção des-tes, pos-sam ser re-a-li-za-das de ma-nei
 ra mais rá-pida e efi-ci-ente [[][]Pas-sini 2012[][]].
  []
 
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 156.
-[9
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 127.
+[7
 
 ]
 LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/it' tried instead on input line 168.
- [10] [11]
-Overfull \hbox (16.50415pt too wide) in paragraph at lines 231--231
+(Font)              Font shape `T1/futs/b/it' tried instead on input line 139.
+ [8] [9]
+Overfull \hbox (16.50415pt too wide) in paragraph at lines 202--202
 |[][]\T1/futs/b/n/14.4 Frequência de Termo In-verso da Frequên-cia nos Do-cu-me
 n-tos - TFIDF[]| 
  []
 
-[12] [13]
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 304
+[10] [11] [12
+
+] [13]
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 307
 .
 
 ("C:\Users\mario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\ts1futs.fd
 "
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
-) [14
+)
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 325.
+ [14
 
 ]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 327.
-
-Overfull \hbox (5.05135pt too wide) in paragraph at lines 343--345
+Overfull \hbox (5.05135pt too wide) in paragraph at lines 341--343
 \T1/futs/m/n/12 Inicialmente o texto é sub-me-tido ao pro-cesso de \T1/futs/m/i
 t/12 stem-ming \T1/futs/m/n/12 bem como a re-ti-rada de \T1/futs/m/it/12 stopwo
 rds\T1/futs/m/n/12 .
  []
 
-[15]
-<Figuras/Grafo.png, id=329, 495.8525pt x 320.19624pt>
+<Figuras/Grafo.png, id=326, 495.8525pt x 320.19624pt>
 File: Figuras/Grafo.png Graphic file (type png)
 <use Figuras/Grafo.png>
-Package pdftex.def Info: Figuras/Grafo.png  used on input line 354.
+Package pdftex.def Info: Figuras/Grafo.png  used on input line 353.
 (pdftex.def)             Requested size: 446.26312pt x 288.17395pt.
- [16 <./Figuras/Grafo.png>]
-<Figuras/G_aresta.png, id=340, 485.815pt x 320.19624pt>
+[15] [16 <./Figuras/Grafo.png>]
+<Figuras/G_aresta.png, id=341, 485.815pt x 320.19624pt>
 File: Figuras/G_aresta.png Graphic file (type png)
 <use Figuras/G_aresta.png>
-Package pdftex.def Info: Figuras/G_aresta.png  used on input line 372.
+Package pdftex.def Info: Figuras/G_aresta.png  used on input line 371.
 (pdftex.def)             Requested size: 437.22946pt x 288.17395pt.
  [17 <./Figuras/G_aresta.png>]
-<Figuras/cluster2.png, id=350, 314.97675pt x 241.50224pt>
+<Figuras/cluster2.png, id=351, 314.97675pt x 241.50224pt>
 File: Figuras/cluster2.png Graphic file (type png)
 <use Figuras/cluster2.png>
-Package pdftex.def Info: Figuras/cluster2.png  used on input line 416.
+Package pdftex.def Info: Figuras/cluster2.png  used on input line 414.
 (pdftex.def)             Requested size: 283.47644pt x 217.34999pt.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 428.
+(Font)              scaled to size 6.99199pt on input line 426.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 428.
+(Font)              scaled to size 5.51999pt on input line 426.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 428.
+(Font)              scaled to size 6.99199pt on input line 426.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 428.
+(Font)              scaled to size 5.51999pt on input line 426.
  [18] [19 <./Figuras/cluster2.png>] [20] [21
 
 ]
-Overfull \hbox (12.05284pt too wide) in paragraph at lines 463--502
+Overfull \hbox (12.05284pt too wide) in paragraph at lines 462--501
  [][] 
  []
 
 [22]
-<Figuras/fluxograma.jpg, id=381, 210.18526pt x 188.50426pt>
+<Figuras/fluxograma.jpg, id=383, 210.18526pt x 188.50426pt>
 File: Figuras/fluxograma.jpg Graphic file (type jpg)
 <use Figuras/fluxograma.jpg>
-Package pdftex.def Info: Figuras/fluxograma.jpg  used on input line 514.
+Package pdftex.def Info: Figuras/fluxograma.jpg  used on input line 513.
 (pdftex.def)             Requested size: 210.18474pt x 188.50378pt.
-<Figuras/flux_key.jpg, id=383, 210.18526pt x 211.38976pt>
+<Figuras/flux_key.jpg, id=385, 210.18526pt x 211.38976pt>
 File: Figuras/flux_key.jpg Graphic file (type jpg)
 <use Figuras/flux_key.jpg>
-Package pdftex.def Info: Figuras/flux_key.jpg  used on input line 526.
+Package pdftex.def Info: Figuras/flux_key.jpg  used on input line 525.
 (pdftex.def)             Requested size: 210.18474pt x 211.38922pt.
  [23] [24 <./Figuras/fluxograma.jpg> <./Figuras/flux_key.jpg>]
-<Figuras/KEY30.png, id=401, 337.26pt x 252.945pt>
+<Figuras/KEY30.png, id=403, 337.26pt x 252.945pt>
 File: Figuras/KEY30.png Graphic file (type png)
 <use Figuras/KEY30.png>
-Package pdftex.def Info: Figuras/KEY30.png  used on input line 584.
+Package pdftex.def Info: Figuras/KEY30.png  used on input line 583.
 (pdftex.def)             Requested size: 337.25917pt x 252.94438pt.
-<Figuras/KEY50.png, id=402, 337.26pt x 252.945pt>
+<Figuras/KEY50.png, id=404, 337.26pt x 252.945pt>
 File: Figuras/KEY50.png Graphic file (type png)
 <use Figuras/KEY50.png>
-Package pdftex.def Info: Figuras/KEY50.png  used on input line 591.
+Package pdftex.def Info: Figuras/KEY50.png  used on input line 590.
 (pdftex.def)             Requested size: 337.25917pt x 252.94438pt.
-<Figuras/TFGERAL.png, id=403, 337.26pt x 252.945pt>
+<Figuras/TFGERAL.png, id=405, 337.26pt x 252.945pt>
 File: Figuras/TFGERAL.png Graphic file (type png)
 <use Figuras/TFGERAL.png>
-Package pdftex.def Info: Figuras/TFGERAL.png  used on input line 598.
+Package pdftex.def Info: Figuras/TFGERAL.png  used on input line 597.
 (pdftex.def)             Requested size: 337.25917pt x 252.94438pt.
-<Figuras/TF12.png, id=404, 331.2375pt x 252.945pt>
+<Figuras/TF12.png, id=406, 331.2375pt x 252.945pt>
 File: Figuras/TF12.png Graphic file (type png)
 <use Figuras/TF12.png>
-Package pdftex.def Info: Figuras/TF12.png  used on input line 605.
+Package pdftex.def Info: Figuras/TF12.png  used on input line 604.
 (pdftex.def)             Requested size: 331.23668pt x 252.94438pt.
-<Figuras/TF15.png, id=405, 331.2375pt x 252.945pt>
+<Figuras/TF15.png, id=407, 331.2375pt x 252.945pt>
 File: Figuras/TF15.png Graphic file (type png)
 <use Figuras/TF15.png>
-Package pdftex.def Info: Figuras/TF15.png  used on input line 612.
+Package pdftex.def Info: Figuras/TF15.png  used on input line 611.
 (pdftex.def)             Requested size: 331.23668pt x 252.94438pt.
  [25]
 [26 <./Figuras/KEY30.png> <./Figuras/KEY50.png>] [27 <./Figuras/TFGERAL.png> <.
@@ -1577,14 +1576,14 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 \tf@toc=\write5
 \openout5 = `projgraduacao.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 672.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 672.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 671.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 671.
  (projgraduacao.aux (introducao.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 672.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 672.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 671.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 671.
 Package rerunfilecheck Info: File `projgraduacao.out' has not changed.
-(rerunfilecheck)             Checksum: 44D558CB8081B9CC33FBC169C59EF217;2490.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 672.
+(rerunfilecheck)             Checksum: F1DFE7E944831323EA07512FBD2DC0C3;2490.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 671.
  ) 
 Here is how much of TeX's memory you used:
  15278 strings out of 492946
@@ -1605,9 +1604,9 @@ AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pfb><C:/User
 s/mario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><
 C:/Users/mario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri
 8a.pfb>
-Output written on projgraduacao.pdf (38 pages, 362685 bytes).
+Output written on projgraduacao.pdf (38 pages, 363225 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
+ 517 PDF objects out of 1000 (max. 8388607)
  113 named destinations out of 1000 (max. 500000)
  331 words of extra memory for PDF output out of 10000 (max. 10000000)
 

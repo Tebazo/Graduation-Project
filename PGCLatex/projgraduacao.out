@@ -1,25 +1,25 @@
 \BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Justificativa}{}% 2
 \BOOKMARK [0][-]{chapter.3}{Objetivos}{}% 3
-\BOOKMARK [0][-]{chapter.4}{Minera\347\343o de Textos}{}% 4
-\BOOKMARK [1][-]{section.4.1}{Identifica\347\343o do Problema}{chapter.4}% 5
-\BOOKMARK [1][-]{section.4.2}{Pr\351-Processamento}{chapter.4}% 6
-\BOOKMARK [1][-]{section.4.3}{Extra\347\343o de Padr\365es}{chapter.4}% 7
-\BOOKMARK [1][-]{section.4.4}{P\363s Processamento}{chapter.4}% 8
-\BOOKMARK [0][-]{chapter.5}{Fundamenta\347\343o Te\363rica}{}% 9
-\BOOKMARK [1][-]{section.5.1}{Pr\351-Processamento}{chapter.5}% 10
-\BOOKMARK [2][-]{subsection.5.1.1}{Identifica\347\343o de Termos}{section.5.1}% 11
-\BOOKMARK [3][-]{subsubsection.5.1.1.1}{Identifica\347\343o de Termos Simples}{subsection.5.1.1}% 12
-\BOOKMARK [3][-]{subsubsection.5.1.1.2}{Identifica\347\343o de Termos Compostos}{subsection.5.1.1}% 13
-\BOOKMARK [2][-]{subsection.5.1.2}{Stopwords}{section.5.1}% 14
-\BOOKMARK [2][-]{subsection.5.1.3}{Stemming}{section.5.1}% 15
-\BOOKMARK [1][-]{section.5.2}{Extra\347\343o de Padr\365es}{chapter.5}% 16
-\BOOKMARK [2][-]{subsection.5.2.1}{Keywords}{section.5.2}% 17
-\BOOKMARK [3][-]{subsubsection.5.2.1.1}{Frequ\352ncia Absoluta}{subsection.5.2.1}% 18
-\BOOKMARK [3][-]{subsubsection.5.2.1.2}{Frequ\352ncia Relativa - TF}{subsection.5.2.1}% 19
-\BOOKMARK [3][-]{subsubsection.5.2.1.3}{Frequ\352ncia Inversa de Documentos - IDF}{subsection.5.2.1}% 20
-\BOOKMARK [3][-]{subsubsection.5.2.1.4}{Frequ\352ncia de Termo Inverso da Frequ\352ncia nos Documentos - TFIDF}{subsection.5.2.1}% 21
-\BOOKMARK [1][-]{section.5.3}{Considera\347\365es Finais}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.4}{Fundamenta\347\343o Te\363rica}{}% 4
+\BOOKMARK [1][-]{section.4.1}{Pr\351-Processamento}{chapter.4}% 5
+\BOOKMARK [2][-]{subsection.4.1.1}{Identifica\347\343o de Termos}{section.4.1}% 6
+\BOOKMARK [3][-]{subsubsection.4.1.1.1}{Identifica\347\343o de Termos Simples}{subsection.4.1.1}% 7
+\BOOKMARK [3][-]{subsubsection.4.1.1.2}{Identifica\347\343o de Termos Compostos}{subsection.4.1.1}% 8
+\BOOKMARK [2][-]{subsection.4.1.2}{Stopwords}{section.4.1}% 9
+\BOOKMARK [2][-]{subsection.4.1.3}{Stemming}{section.4.1}% 10
+\BOOKMARK [1][-]{section.4.2}{Extra\347\343o de Padr\365es}{chapter.4}% 11
+\BOOKMARK [2][-]{subsection.4.2.1}{Keywords}{section.4.2}% 12
+\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Frequ\352ncia Absoluta}{subsection.4.2.1}% 13
+\BOOKMARK [3][-]{subsubsection.4.2.1.2}{Frequ\352ncia Relativa - TF}{subsection.4.2.1}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.1.3}{Frequ\352ncia Inversa de Documentos - IDF}{subsection.4.2.1}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.1.4}{Frequ\352ncia de Termo Inverso da Frequ\352ncia nos Documentos - TFIDF}{subsection.4.2.1}% 16
+\BOOKMARK [1][-]{section.4.3}{Considera\347\365es Finais}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{Minera\347\343o de Textos}{}% 18
+\BOOKMARK [1][-]{section.5.1}{Identifica\347\343o do Problema}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.2}{Pr\351-Processamento}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.3}{Extra\347\343o de Padr\365es}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.4}{P\363s Processamento}{chapter.5}% 22
 \BOOKMARK [0][-]{chapter.6}{KeyGraph}{}% 23
 \BOOKMARK [1][-]{section.6.1}{Normalizar Texto}{chapter.6}% 24
 \BOOKMARK [1][-]{section.6.2}{Criar Grafo}{chapter.6}% 25

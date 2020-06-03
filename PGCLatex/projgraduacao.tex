@@ -110,35 +110,6 @@ Como objetivo secundário, visa-se realizar a comparação de desempenho entre duas
 
 
 
-\chapter{Mineração de Textos}\label{cap:met}
-
-%Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, será feita a leitura do texto das dissertações, com o objetivo de identificar entre elas quais envolvem temas semelhantes ao trabalho científico.
-%Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
-
-
-Sabendo que o processo de Mineração de Textos é representado por cinco grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas seções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}.
-
-\section{Identificação do Problema}
-
-Utilizar técnicas de mineração de textos na recomendação dos docentes mais apropriados para comporem a banca avaliadora de um determinado trabalho. Para isso, serão utilizado as informações presentes nas dissertações de mestrado dos docentes.
-
-\section{Pré-Processamento}
-
-O desafio inicial é identificar um método ou ferramenta que realize a leitura dos textos presente nas dissertações e os disponibilize para uso.
-
-Para que o processo realize as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para \textit{limpar} o texto, tais como \textit{stopwords} e \textit{stemming} \cite{SLP00}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
-
-
-\section{Extração de Padrões}\label{sec:ext}
-
-Para identificar palavras-chave (\textit{key words}) são utilizados critérios estatísticos ou modelos matemáticos.
-Para cada palavra-chave do texto de entrada, será realizada uma comparação entre as palavras-chave retiradas das dissertações dos docentes.
-Os docentes que obtiverem maior frequência de tais palavras ou que tenham alguma identificação de correlação com tais palavras, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para comporem a banca.
-
-
-\section{Pós Processamento}
-
-Tendo em vista a informação extraída, a formação de bancas coerentes com o tema abordado será realizada de maneira simples, pois bastará selecionar os docentes que foram identificados com maior familiaridade ao assunto. 
 
 
 
@@ -291,6 +262,38 @@ Há diversas maneiras de realizar a extração de padrões de um texto, porém a maio
 Com o objetivo de explorar aqueles que não utilizam o TFIDF como base de cálculo, foi selecionado neste trabalho o KeyGraph \cite{ohsawa1998keygraph}, metodologia que considera os \textit{clusters} de um grafo as principais ideias abordadas em um texto, e as palavras responsáveis por conectá-las como as \textit{keywords}, conforme detalhado no Capítulo \ref{cap:keygraph}.
 
 
+\chapter{Mineração de Textos}\label{cap:met}
+
+%Dado um trabalho científico como parâmetro de entrada, o processo realizará a leitura de todas as palavras presentes no texto, armazenando-as para posterior consulta. Feito isso, será feita a leitura do texto das dissertações, com o objetivo de identificar entre elas quais envolvem temas semelhantes ao trabalho científico.
+%Docentes que obtiverem maior correspondência de palavras, consequentemente são aqueles que atuam em áreas relacionadas à apresentada no trabalho. 
+
+
+Sabendo que o processo de Mineração de Textos é representado por quatro grandes etapas: identificação do problema, pré-processamento, extração de padrões, pós processamento e utilização do conhecimento, as próximas seções possuem a finalidade de identificar essas etapas no problema que será estudado \cite{rezende2011uso}.
+
+\section{Identificação do Problema}
+
+Utilizar técnicas de mineração de textos na recomendação dos docentes mais apropriados para comporem a banca avaliadora de um determinado trabalho. Para isso, serão utilizado as informações presentes nas dissertações de mestrado dos docentes.
+
+\section{Pré-Processamento}
+
+O desafio inicial é identificar um método ou ferramenta que realize a leitura dos textos presente nas dissertações e os disponibilize para uso.
+
+Para que o processo realize as comparações entre as palavras, é de extrema importância que o texto armazenado esteja normalizado. Assim, é preciso aplicar algumas técnicas para \textit{limpar} o texto, tais como \textit{stopwords} e \textit{stemming} \cite{SLP00}, eliminando redundâncias e/ou variações morfológicas. Após a normalização do texto, preposições, plurais, letras maiúsculas e acentuações não irão interferir na análise do processo. 
+
+
+\section{Extração de Padrões}\label{sec:ext}
+
+Para identificar palavras-chave (\textit{key words}) são utilizados critérios estatísticos ou modelos matemáticos.
+Para cada palavra-chave do texto de entrada, será realizada uma comparação entre as palavras-chave retiradas das dissertações dos docentes.
+Os docentes que obtiverem maior frequência de tais palavras ou que tenham alguma identificação de correlação com tais palavras, são aqueles que possuem maior familiaridade com o assunto abordado no trabalho e portanto os mais indicados para comporem a banca.
+
+
+\section{Pós Processamento}
+
+Tendo em vista a informação extraída, a formação de bancas coerentes com o tema abordado será realizada de maneira simples, pois bastará selecionar os docentes que foram identificados com maior familiaridade ao assunto. 
+
+
+
 
 \chapter{KeyGraph} \label{cap:keygraph}
 
@@ -307,12 +310,7 @@ O algoritmo utilizará importantes conceitos, sendo eles:
 \item Componente conexo: subconjunto de vértices de um grafo que pode-se chegar em qualquer um dos vértices a partir de outro vértice do subconjunto, i.e., são alcançáveis entre si.
 \end{itemize}
 
-Os autores sugerem a seguinte parametrização:
-\begin{itemize}
-\item \(N_{HF} = 30\).
-\item \(N_{HK} = 12\).
-\item \(N_{KW} = 12\).
-\end{itemize}
+
 
 
 %Para um melhor entendimento do passo a passo da metodologia, um pseudocódigo foi desenvolvido:
@@ -345,7 +343,8 @@ Por exemplo, para uma sentença que possui palavras \textit{a}, \textit{b}, \text
 
 \section{Criar Grafo}
 
-Dentre todas as possíveis combinações, é selecionada aquela que possuir a maior frequência no texto (dando preferência pelo candidato com mais palavras). Este processo deverá ser realizado para todas as sentenças do documento, armazenando os termos em uma lista ordenada (\(D_\text{terms}\)). Os termos mais frequentes são selecionados, seja \textit{HF} o conjunto dos \(N_{HF}\) termos com maior frequência em \(D_\text{terms}\), cria-se um grafo \textit{G} com \(N_{HF}\) vértices correspondentes aos elementos de HF. 
+Dentre todas as possíveis combinações, é selecionada aquela que possuir a maior frequência no texto (dando preferência pelo candidato com mais palavras). Este processo deverá ser realizado para todas as sentenças do documento, armazenando os termos em uma lista ordenada (\(D_\text{terms}\)). Os termos mais frequentes são selecionados, seja \textit{HF} o conjunto dos \(N_{HF}\) termos com maior frequência em \(D_\text{terms}\), cria-se um grafo \textit{G} com \(N_{HF}\) vértices correspondentes aos elementos de HF. %M
+No artigo do qual foi extraído o algoritmo, é atribuído o valor 30 para o  parâmetro \(N_{HF}\) \cite{ohsawa1998keygraph}.
 
 Ao analisar o exemplo proposto, definiu-se o valor 10 para o \(HF\), resultando os seguintes termos: \textit{form}, \textit{educac}, \textit{text},  \textit{dad}, \textit{estrut}, \textit{ger}, \textit{merc}, \textit{palavr}, \textit{desd} e \textit{grup}, gerando o grafo da Figura \ref{graf1}.
 
@@ -403,10 +402,9 @@ A partir da divisão desses valores, computa-se o \(key_{w}\), que é a probabilid
 \begin{equation}
 key(w) = 1 - \prod_{g \in G} \left(1 - \frac{based(w,g)}{neighbors(g)}\right)\\
 \end{equation}
-Feito isso, são considerados os \(N_{HK}\) termos com maiores valores de \(key\) como \(HK\).
-Os termos de \(HK\) são adicionados como vértices em \textit{G} (vide Figura \ref{grafhk}), caso eles já não se encontrem no mesmo. O cenário ideal seria cada termo de um \textit{cluster} (\textit{foundation}) em \textit{G} estar conectado com todos os outros vértices do seu \textit{cluster}, sem conexão com outros \textit{clusters}.
-%T: Melhorar essa frase aqui
-%Alguns casos as \textit{foundations} possuem uma leve relação, porém não o suficiente para separá-los.	
+Feito isso, são considerados os \(N_{HK}\) termos com maiores valores de \(key\) como \(HK\).%M
+O autor do artigo recomenda o valor 12 para este parâmetro. Os termos de \(HK\) são adicionados como vértices em \textit{G} (vide Figura \ref{grafhk}), caso eles já não se encontrem no mesmo.  O cenário ideal seria cada termo de um \textit{cluster} (\textit{foundation}) em \textit{G} estar conectado com todos os outros vértices do seu \textit{cluster}, sem conexão com outros \textit{clusters}.
+
 
 
 O termo que apresentou o maior valor de \textit{key} foi \textit{dad} com o valor de 0.0955, o que faz todo o sentido, uma vez que ele é de suma importância para a compreensão dos tópicos do documento.
@@ -439,7 +437,8 @@ Para cada aresta do grafo, é verificado se a mesma é de corte\footnote{Aresta cu
 
 \section{Extrair Keywords} 
 
-Os vértices do grafo são ordenados pela soma de valores de \textit{column} que chegam neles. São selecionados os \(N_{HK}\) com os maiores valores de soma, resultando nas palavras-chave.
+Os vértices do grafo são ordenados pela soma de valores de \textit{column} que chegam neles. São selecionados os \(N_{HK}\) com os maiores valores de soma, resultando nas palavras-chave.%M
+ O autor adota \(N_{HK}\) com o valor 12 em seu artigo \cite{ohsawa1998keygraph}. 
 O \(N_{HK}\) do exemplo foi definido com o valor 4, isso devido ao tamanho do texto e a quantidade de tokens gerados. Assim, as \textit{keywords} selecionadas foram \textit{text}, \textit{dad}, \textit{estrut} e \textit{analis}.
 
 \section{Considerações Finais}
@@ -620,7 +619,7 @@ Tanto visualmente por meio dos mapas de calor, quanto pelos cálculos fica eviden
 
 Pelo fato do KeyGraph extrair um número pequeno de palavras-chave, a metodologia enfrenta dificuldades em identificar temas específicos. Na grande maioria dos textos, as palavras-chave extraídas eram de âmbito geral da grande área da Ciência da Computação, tais como ``dados'', ``algoritmo'' e ``sistema'', ou seja, termos que possuem sempre muita ocorrência nos textos referentes a área de tecnologia. Assim, a metodologia não consegue apontar o docente que possui a maior relação com o texto, uma vez as palavras-chave são similares na maioria dos textos-avaliado e textos-base. Isso resulta  em similaridades parelhas, impossibilitando diferenciar docentes que possuem destaque em uma linha de pesquisa específica.
 
-Vale ressaltar que os dois cenários no qual o KeyGraph foi exposto, de uma maneira geral, apresentou pequenas diferença de comportamento. Visto que, em um número de artigos seu desempenho foi superior com o KeyGraph30, como no Artigo 1 no qual o docente foi recomendado na primeira posição enquanto no KeyGraph50 o mesmo caiu para a quinta posição. Por outro lado, no Artigo 2 haviam dois docentes diretamente relacionados ao artigo, com os parâmetros do KeyGraph50 eles foram ranqueados em primeiro e terceiro, em contrapartida eles passaram para terceiro e quarto no KeyGraph30. Em suma, a alteração de parâmetros do KeyGraph, fez com que um número de artigos fosse melhor avaliado, mas por outro lado piorou o desempenho do restante, ou seja, não impactando no resultado geral, uma vez que a nota do algoritmo em ambos os casos foi a mesma.
+Vale ressaltar que os dois cenários no qual o KeyGraph foi exposto, de uma maneira geral, apresentou pequenas diferença de comportamento. Visto que, em um número de artigos seu desempenho foi superior com o KeyGraph30, como no Artigo 4 no qual o docente mais similar foi recomendado na primeira posição enquanto no KeyGraph50 o mesmo caiu para a quinta posição. Por outro lado, no Artigo 6 o KeyGraph50 ranqueou um dos docente relacionado ao artigo em segundo e o mesmo cai para quarto no KeyGraph30. Em suma, a alteração de parâmetros do KeyGraph, fez com que um número de artigos fosse melhor avaliado, mas por outro lado piorou o desempenho do restante, ou seja, não impactando no resultado geral, uma vez que a nota do algoritmo em ambos os casos foi a mesma.
 
 
 %uma variação nos parâmetros utilizados na metodologia não impactaram no resultado geral, isso porque a nota geral do algoritmo se manteve a mesma.
